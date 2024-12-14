@@ -34,16 +34,32 @@ all of them.
 NOR, XNOR in Digital.
 
 1. Create a new circuit in Digital.
-1. Insert two inputs, let's name them `A` and `B`.
+1. Insert two inputs.
+1. Label them `A` and `B`: To label an input right-click on it, and edit the
+   `Label` text entry.
 1. Insert two NOT gates.
 1. Wire input `A` to the first NOT gate, and input `B` to the second NOT gate.
    Note a NOT gate accepts a single input.
-1. Insert one of the remaining logic gates, 6 in total.
+1. Insert each one of the remaining logic gates, 6 in total.
 1. Insert an LED output for each gate, 8 in total.
 1. Wire input `A` to the first input of each 2-input gate (AND, OR, XOR, NAND,
    NOR, XNOR).
+1. If you make a mistake while adding wires, hold down Ctrl and click the
+   offending wire, then *drag* it to its new location. Similarly, Ctrl-click a
+   wire and drag it to the trashcan icon in the toolbar, then click the
+   trashcan icon, to delete it.
 1. Wire input `B` to the second input of each 2-input gate.
+1. Label each LED according to its role: `NOT A`, `NOT B`, `A AND B`, `NOT (A
+   AND B)`, etc.
 1. Simulate your circuit. How does each logic gate function?
+   If there are disconnected input pins ("floating" inputs), Digital will
+   complain with an error message similar to this:
+   ```
+   Error creating the circuit. Nothing connected to input 'in_2' at component
+   'XNOr'. Open inputs are not allowed.
+   ```
+   If this happens, make sure you have connected every input of every gate to either
+   input `A` or `B` and try again.
 1. Write down the [truth table](https://www.geeksforgeeks.org/logic-gates/) for
    each one of the gates.
 1. Save your work as `adv-1a.dig`.
@@ -79,9 +95,11 @@ in Digital.
    input of each chip, *except* the 7404 chip, where you can use two inputs. Connect every single
    unused input of every chip to VCC [a logical `1`] or to GND [a logical `0`].
 1. Simulate your circuit. How does each logic gate function?
-   If there are disconnected input pins ("floating" inputs), Digital will complain:
+   If there are disconnected input pins ("floating" inputs), Digital will
+   complain with an error message similar to this:
    ```
-   FIXME
+   Error creating the circuit. Nothing connected to input 'in_2' at component
+   'XNOr'. Open inputs are not allowed.
    ```
    If this happens, make sure you have connected every single input to either VCC or GND,
    and try again. See [this issue in Digital](https://github.com/hneemann/Digital/issues/36)
