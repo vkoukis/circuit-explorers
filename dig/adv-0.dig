@@ -38,7 +38,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>A XOR B</string>
+          <string>XOR</string>
         </entry>
       </elementAttributes>
       <pos x="940" y="320"/>

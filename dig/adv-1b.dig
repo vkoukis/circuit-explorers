@@ -63,7 +63,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>NOT A</string>
+          <string>NOT_A</string>
         </entry>
       </elementAttributes>
       <pos x="800" y="180"/>
@@ -73,7 +73,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>NOT B</string>
+          <string>NOT_B</string>
         </entry>
       </elementAttributes>
       <pos x="800" y="260"/>
@@ -83,7 +83,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>A AND B</string>
+          <string>AND</string>
         </entry>
       </elementAttributes>
       <pos x="1280" y="180"/>
@@ -93,7 +93,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>A OR B</string>
+          <string>OR</string>
         </entry>
       </elementAttributes>
       <pos x="1280" y="480"/>
@@ -103,7 +103,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>A XOR B</string>
+          <string>XOR</string>
         </entry>
       </elementAttributes>
       <pos x="1280" y="780"/>
@@ -113,7 +113,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>NOT (A AND B)</string>
+          <string>NAND</string>
         </entry>
       </elementAttributes>
       <pos x="1780" y="180"/>
@@ -123,7 +123,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>NOT (A OR B)</string>
+          <string>NOR</string>
         </entry>
       </elementAttributes>
       <pos x="1780" y="480"/>
@@ -133,7 +133,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>NOR (A XOR B)</string>
+          <string>XNOR</string>
         </entry>
       </elementAttributes>
       <pos x="1780" y="780"/>

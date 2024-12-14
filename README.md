@@ -49,8 +49,8 @@ NOR, XNOR in Digital.
    wire and drag it to the trashcan icon in the toolbar, then click the
    trashcan icon, to delete it.
 1. Wire input `B` to the second input of each 2-input gate.
-1. Label each LED according to its role: `NOT A`, `NOT B`, `A AND B`, `NOT (A
-   AND B)`, etc.
+1. Label each LED according to its role: `NOT_A`, `NOT_B`, `AND`, `OR`, `NAND`,
+   etc.
 1. Simulate your circuit. How does each logic gate function?
    If there are disconnected input pins ("floating" inputs), Digital will
    complain with an error message similar to this:
@@ -66,6 +66,8 @@ NOR, XNOR in Digital.
    on whether their current state is  `1` or `0`, respectively.
 1. Write down the [truth table](https://www.geeksforgeeks.org/logic-gates/) for
    each one of the gates, according to your testing.
+1. Navigate to Analysis --> Analysis in the menu. See Digital produce the truth
+   table for each one of your outputs automatically.
 1. Save your work as `adv-1a.dig`.
 
 
@@ -124,6 +126,8 @@ in Digital.
    If this happens, make sure you have connected every single input to either
    VCC or GND, and try again. See [this issue in Digital](https://github.com/hneemann/Digital/issues/36)
    for technical details.
+1. Compare the truth table of your new circuit to the truth table of Adventure
+   1A. They should be identical.
 1. Save your work as `adv-1b.dig`.
 
 
