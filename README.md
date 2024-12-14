@@ -58,10 +58,14 @@ NOR, XNOR in Digital.
    Error creating the circuit. Nothing connected to input 'in_2' at component
    'XNOr'. Open inputs are not allowed.
    ```
-   If this happens, make sure you have connected every input of every gate to either
-   input `A` or `B` and try again.
+   If this happens, make sure you have connected every input of every gate to
+   either input `A` or `B` and try again. If things still fail, *remove* some
+   of the logic gates to simplify your circuit, until you can get it to work,
+   then add them back gradually.
+1. Notice how some wires are light green, some others are dark green, depending
+   on whether their current state is  `1` or `0`, respectively.
 1. Write down the [truth table](https://www.geeksforgeeks.org/logic-gates/) for
-   each one of the gates.
+   each one of the gates, according to your testing.
 1. Save your work as `adv-1a.dig`.
 
 
@@ -74,35 +78,51 @@ in Digital.
    ([Wikipedia](https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits#Logic_gates))
    of integrated circuits ("chips", "ICs"). We care about the "Normal inputs /
    push-pull outputs" category.
-1. See we will be using chips 74LS04, 74LS08, 74LS32, 74LS86, 74LS00, 74LS02, 74LS7266.
-   How many gates and of which kind does each IC implement?
+1. See we will be using chips 74LS04, 74LS08, 74LS32, 74LS86, 74LS00, 74LS02,
+   74LS7266. How many gates and of which kind does each IC implement?
 1. Find the documentation for Digital as a PDF file in the `docu/` directory,
    e.g., `docu/Documentation_en.pdf`. Section `E Library` contains a full list
    of all supported 74xx ICs.
 1. Create a new circuit in Digital.
 1. Navigate to Components --> Library --> DIL chips --> 74xx --> basic.
 1. Insert one of each of the 7404, 7408, 7432, 7486, 7400, 7402, 747266 chips.
-1. Notice the pinout for each chip. There are pins for each input and output, as well
-   as pins to connect to power [VCC] and to the ground [GND].
-1. Create a circuit similar to the one in Adventure 1A, with the same inputs and outputs,
-   but replace the basic logic gates with the 74xx chips.
-1. Navigate to Components --> Wires --> Supply voltage and add a power source next to each chip.
-   Name it `VCC`. Connect the VCC pin of each chip to VCC.
-   Connect the VCC pin of each chip to this power source. Name it `VCC`.
-1. Navigate to Components --> Wires --> Ground and add a ground terminal next to each chip.
-   Name it `GND`. Connect the GND pin of each chip to GND.
-1. Notice each chip implements more than one logic gates, but you only need to use one
-   input of each chip, *except* the 7404 chip, where you can use two inputs. Connect every single
-   unused input of every chip to VCC [a logical `1`] or to GND [a logical `0`].
+   Arrange them one below the other, in two or three columns, any way you like.
+1. Use the scroll wheel of your mouse to zoom in and out of the circuit, hold
+   down the right mouse button and drag the circuit, to move it around.
+1. Notice the pinout for each chip. There are pins for each input and output,
+   as well as pins to connect to power [VCC] and to the ground [GND].
+1. Insert two inputs, label them `A` and `B`.
+1. Wire the inputs to create a circuit equivalent to the one in Adventure 1A,
+   this time using 74xx chips instead of the basic LED gates. For each chip 
+   implementing 2-input gates, wire input `A` to input `1A` of each chip, and
+   input `B` to input `1B` of each chip. Notice chip 7404 implements NOT gates
+   which only accept one input, and the pin layout differs slightly between
+   different chips, so you need to be paying attention.
+1. Insert an LED output per gate you have used, 8 total. Label them according
+   to their role, as in Adventure 1A. Wire the output of each logic gate you
+   have used to the right LED. When adding wires, pay attention to not touch
+   other
+   pins on the chip. It is OK if the wires go over the chip itself, but they
+   should not touch other pins, because you will find it difficult to wire
+   these pins later on.
+1. Navigate to Components --> Wires --> Supply voltage and add a power source
+   next to each chip. Label it `VCC`. Connect the VCC pin of each chip to VCC.
+1. Navigate to Components --> Wires --> Ground and add a ground terminal next
+   to each chip. Label it `GND`. Connect the GND pin of each chip to GND.
+1. Notice each chip implements more than one logic gates, but you only need to
+   use one input of each chip, *except* the 7404 chip, where you use two
+   inputs. Connect every single unused input of every chip to VCC [a logical
+   `1`] or to GND [a logical `0`]. It does not matter, as long as every single
+   input is connected to either VCC or GND.
 1. Simulate your circuit. How does each logic gate function?
    If there are disconnected input pins ("floating" inputs), Digital will
    complain with an error message similar to this:
    ```
-   Error creating the circuit. Nothing connected to input 'in_2' at component
-   'XNOr'. Open inputs are not allowed.
+   Error creating the circuit. No output connected to a wire ([In_2; NAnd]).
+   The state of the wire is undefined. Ocured in file 7400.dig.
    ```
-   If this happens, make sure you have connected every single input to either VCC or GND,
-   and try again. See [this issue in Digital](https://github.com/hneemann/Digital/issues/36)
+   If this happens, make sure you have connected every single input to either
+   VCC or GND, and try again. See [this issue in Digital](https://github.com/hneemann/Digital/issues/36)
    for technical details.
 1. Save your work as `adv-1b.dig`.
 
