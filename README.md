@@ -7,6 +7,73 @@ digital circuits.
 in the [74LS family of integrated circuits](https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits).
 
 
+## Adventure 0A: Create your first circuit
+
+Video: https://www.youtube.com/shorts/QKsVPHKTNOw
+Breadboard
+Multimeter: Set it to the 🎵 position. Test that the meter beeps when you touch the probes together, this means there it detects an electrical connection [very small resistance]. Tie small jumper wires around the probes so you can put them in the holes of the breadboard, and experiment with the connections! When does the multimeter beep?
+
+Resistance: Set your multimeter to "Ω - 200" or a similar range. Measure an 150Ω resistor. [147Ω]
+
+Chassis connector. Take it, find out which pins correspond to the round part and the pin of the barrel plug. Wrap two small wires at each pin, so you can then insert them in the breadboard. Insert the wire that corresponds to the pin in the (+) bar, and the wire that corresponds to the round part in the (-) bar. The (+) bar will be your VCC, the (-) bar will be your GND.
+
+Set your multimeter to "V - 20V" or a similar range. Measure voltage across the breadboard. Ensure you are measuring around 5.00V. The polarity [the sign] is important!
+Make sure to place the red lead on (+), the black lead on (-). What happens if you reverse them? Note down the voltage [5.13V]
+
+Measure current. Connect your multimeter *inline* with the resistor. Set to "DC A - 200m" or similar. How much current do you measure?
+
+Measure voltage between VCC and GND. Then, keep the multimeter connected, and disconnect one leg of the resistor, to open the circuit. What do you notice? [5.11V --> 5.14V]. Why? Because our power source is not perfect ["ideal"].
+
+Experiment with two resistors in line [same current] I = I1 = I2, U = U1 + U2.
+Experiment with two resistors in parallel [same voltage] U = U1 = U2, I = I1 + I2.
+
+
+## Adventure 0A: Light an LED
+
+EveryCircuit.
+Simulate circuit. Battery --> LED. How much voltage? Kaboom.
+
+LED is 2-2.5V.
+Aim for 2.4V. --> 130Ω
+Video: https://www.youtube.com/shorts/CIMbjJQNHa0
+
+Make sure to place the *long* leg [anode, (+)] to the side of VCC.
+
+Multimeter: Place inline, measure current [20.4mA].
+What do you expect the voltage drop to be around the resistor? [U = IR = 2.9988V]
+Measure voltage drop across resistor [3.02V].
+Measure voltage drop across diode [2.09V]
+What is their sum, why? It is ~5V, exactly the voltage of our source, because U = U1 + U2.
+
+Does it make a difference if the resistor is between VCC and (+) or between (-) and GND? No, because the current is exactly the same.
+
+Use a momentary switch inline with the LED. Use the multimeter to find out what each pin does, set it to "Ω - 🎵" mode.
+
+Replace with a small switch (SPDT) inline with the LED. Switch it on and off at will.
+The switch is a *double throw* switch. Design a circuit which allows you to choose one of the two LEDs to light. Pay attention to the *polarity* of the LEDs.
+
+
+### Adventure 0B: Light an LED: Design and simulate circuit
+
+Navigate to https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html
+Click **Download for Windows 10 64-bit and forward** [or any other option, depending on the Operating System on your computer]
+Double-click file `LTspice64.msi`, follow the instructions to install LTspice
+Launch LTspice. It may prompt you to update your library files, accept and allow it to download the latest versions.
+
+1. Download QSPice: https://getqspice.com/InstallQSPICE.exe
+1. "Install as User"
+1. Allow the installer to download QSPICE
+
+
+### Adventure 0C: Light an LED: Build physical circuit
+
+## Adventure 0A: Light two LEDs
+
+### Adventure 0B: Light two LEDs: Design and simulate circuit
+
+### Adventure 0C: Light two LEDs: Build physical circuit
+
+
 ## Adventure 0: Install Digital, run tutorial
 
 *Goal:* Install [Digital](https://github.com/hneemann/Digital).
@@ -76,6 +143,24 @@ NOR, XNOR in Digital.
 *Goal:* Build a circuit similar to the one in Adventure 1A, but use 74xx chips
 in Digital.
 
+Place the 7404 in the middle of your breadboard.
+You may have to bend some pins slightly, experiment, don't worry if you break things.
+Connect the VCC pin to the VCC bar, and the GND pin to the GND bar.
+Connect to the power supply and ensure the the chip gets 5V across its VCC and GND pins.
+Bridge all pins you will not be using [3A, 4A, 5A, 6A] to GND with small wires.
+Connect a pushbutton [a "momentary switch"], so that one of the side pins to
+VCC, the other to GND, so that the middle pin stays LOW when you do nothing,
+and turns to HIGH when you push the button. Use your multimeter to verify.
+Switch the jumper wires until you make it happen.
+Connect the *middle* pin of the momentary switch to the 1A input of the 7404.
+Use your multimeter to measure all voltages. If they are not 0V and ~5V [i.e., a clear LOW, or HIGH] make sure you've seated all of your jumper wires properly, one connection make be flaky. Do not move on until you've confirmed this, a clear signal at the input pin of the 74LS04.
+
+OUTPUT: Measure the voltage at the output pin of the 74LS04 when you do nothing [4.57V] and when you push the button [0.14V]. What is happening?
+The 74LS04 is an *inverter*, i.e., it implements a NOT gate.
+
+Connect an LED: VCC -> resistor --> anode of the LED --> cathode of the LED --> 1Y.
+Voltage: 4.58V. Button pushed, voltage: 0.51V
+
 1. Have a look at the list of logic gates in the 74LS family
    ([Wikipedia](https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits#Logic_gates))
    of integrated circuits ("chips", "ICs"). We care about the "Normal inputs /
@@ -98,14 +183,13 @@ in Digital.
    this time using 74xx chips instead of the basic LED gates. For each chip 
    implementing 2-input gates, wire input `A` to input `1A` of each chip, and
    input `B` to input `1B` of each chip. Notice chip 7404 implements NOT gates
-   which only accept one input, and the pin layout differs slightly between
-   different chips, so you need to be paying attention.
+   which only accept one input. Also note the pin layout differs slightly
+   between different chips, so you need to be paying attention.
 1. Insert an LED output per gate you have used, 8 total. Label them according
    to their role, as in Adventure 1A. Wire the output of each logic gate you
    have used to the right LED. When adding wires, pay attention to not touch
-   other
-   pins on the chip. It is OK if the wires go over the chip itself, but they
-   should not touch other pins, because you will find it difficult to wire
+   other pins on the chip. It is OK if the wires go over the chip itself, but
+   they should not touch other pins, because you will find it difficult to wire
    these pins later on.
 1. Navigate to Components --> Wires --> Supply voltage and add a power source
    next to each chip. Label it `VCC`. Connect the VCC pin of each chip to VCC.
@@ -150,7 +234,7 @@ these tools throughout the tutorial:
 *Components:* Here is a list of the components you will need to buy:
 | Quantity | Name                      | Description                           | Links                         |
 | :------  | :-----------------------  | :------------------------------------ | :---------------------------- |
-| 1        | 5V power supply           | E.g., any USB charger                 |                               |
+| 1        | 5V power supply           | E.g., any USB charger                 | Buy a breakout plug, so we can connect |
 | 1        | breadboard                | Breadboard                            | [Fanos](https://www.fanos.gr/en-gb/electronic-components/boards-testing-boards/solderless-breadboard-mb-102.html) |
 | 1        | 65-piece jumper wire kit  | Many small jumper wires to use with the breadboard | [Fanos](https://www.fanos.gr/en-gb/electronic-components/jumpers-pinheaders/65pcs-flexible-breadboard-jumper-wires.html) |
 | 1        | 74LS04                    | Hex inverter                          | [Fanos](https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls04.html) |
@@ -161,8 +245,12 @@ these tools throughout the tutorial:
 | 1        | 74LS86                    | Quad 2-input XOR gate                 | [Fanos](https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls86.html) |
 | 1        | 74LS7266                  | Quad 2-input XNOR gate                | Not sure it is actually available |
 | 2        | SPDT switch               | Single Pole Double Throw Switch       | [Fanos](https://www.fanos.gr/en-gb/switches/slide-switch/slide-switch-on-on-spdt-12d01.html) |
-| 3        | LED, red                  | LED, red 2-2.5V, 20mA                 | [Fanos](https://www.fanos.gr/%CF%80%CE%B7%CE%B3%CE%AD%CF%82-%CF%86%CF%89%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D/led/10mm/led-10mm-%CE%BA%CF%8C%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%85-%CF%87%CF%81%CF%8E%CE%BC%CE%B1%CF%84%CE%BF%CF%82-l813id-40-150mcd-html) |
-| 3        | 120-150Ω resistors        | Resistors, 1W                         | [Fanos](https://www.fanos.gr/%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BE%CE%B1%CF%81%CF%84%CE%B7%CE%BC%CE%B1%CF%84%CE%B1/%CE%91%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AC%CF%83%CE%B5%CE%B9%CF%82,%20antistaseis,%20%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7,%20antistasi/%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7-1W/%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CE%B1%CF%83%CE%B7-120-%CF%89-1w.html) |
+| 10       | LED, red                  | LED, red 2-2.5V, 20mA                 | [Fanos](https://www.fanos.gr/%CF%80%CE%B7%CE%B3%CE%AD%CF%82-%CF%86%CF%89%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D/led/10mm/led-10mm-%CE%BA%CF%8C%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%85-%CF%87%CF%81%CF%8E%CE%BC%CE%B1%CF%84%CE%BF%CF%82-l813id-40-150mcd-html) |
+| 2        | 1kΩ resistors             | Resistors, ½W                       | [Fanos](https://www.fanos.gr/%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BE%CE%B1%CF%81%CF%84%CE%B7%CE%BC%CE%B1%CF%84%CE%B1/%CE%91%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AC%CF%83%CE%B5%CE%B9%CF%82,%20antistaseis,%20%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7,%20antistasi/%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7-1_4W/%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CE%B1%CF%83%CE%B7-1-%CE%BA-1-4w.html) |
+| 2        | 150Ω resistors            | Resistors, ½W                       | [Fanos](FIXME) |
+| 2        | 300Ω resistors            | Resistors, ½W                       | [Fanos](FIXME) |
+| 2        | 500Ω resistors            | Resistors, ½W                       | [Fanos](FIXME) |
+| 1        | 0.1μF capacitor           | Ceramic capacitor                   | [Fanos](FIXME) |
 
 **TODO:** Revisit this list. 74LS is TTL and cannot drive output LEDs directly,
 it can only source 1mA, LEDs need ~5-20mA.
@@ -170,6 +258,18 @@ See:
 https://www.eevblog.com/forum/beginners/driving-leds-with-74ls-logic/
 > TTL is better at sinking current, so run the LEd's from the 5V rail with the logic low turning them on. Use 5mA as a current and most modern LED devices will be very bright at this current. Typically this means a 470R resistor per LED.
 > A typical 74LS00 output pin can sink significant current to drive a standard LED. Just wire the cathode to the output pin through a suitably sized series resistor (calc for maybe 10 ma, plenty bright) to then to +5vcc. You just have design for circuit so that a LOW  output is the active (lite) state.
+On the other hand, people have been doing it, but it's not guaranteed to work if you also want to drive the *input* of a different 74LS chip:
+https://forum.allaboutcircuits.com/threads/74ls-outputs-drivind-leds.133593/
+So, the conclusion is, it's best to use an actual buffer/inverter. I can use 74LS04 [inverter] or 74LS07 [high-voltage open-collector buffer].
+
+**TODO:** Use a pull-up resistor for HIGH inputs. Do not use a pull-down resistor at all, just connect inputs to GND.
+See: https://www.edaboard.com/threads/using-sinlge-pull-down-resistor-for-inputs-to-mutiple-gates-ito-74ls-ics.360131/post-1542109
+> Example on 74LS00 (TI datasheet):
+> Given: 5V supply, V_IH =2V, V_IL=0.8V, I_IH=20uA, I_IL =-0.4mA.
+> Pulldown to ensure valid low level: R = V / I = V_IL / I_IL = 0.8V / 0.4mA = 2000Ohms. or less. --> use 1K (down to 0R)
+> Pullup to ensure valid high level: R = (5V - V_IH) / I_IH = (5V - 2V) / 20uA = 3V/20uA = 150k. or less. --> Use 10k (down to 0R)
+Standardize on a 1k pull-up resistor.
+
 
 **WIP:**
 
@@ -177,7 +277,9 @@ https://www.eevblog.com/forum/beginners/driving-leds-with-74ls-logic/
 
 ## Adventure: Control an LED with a pushbutton / switch: https://www.sparkfun.com/tutorials/219, https://www.youtube.com/watch?v=zhaX7Im2gTw&list=PLsAJMThMEUtpbjd5ulXTbUwijF1nJkjd_
 
-## Adventure: 4-bit 7-seg display controller [combinatorial, then 74LS chips]
+## Adventure: Implement all gates via NAND, so we can standardize on 74LS00
+
+## Adventure: 4-bit 7-segment display controller [combinatorial, then 74LS chips]
 
 ## Adventure: Full 4-bit adder [combinatorial, then 74LS chips]
 
@@ -206,5 +308,4 @@ https://www.eevblog.com/forum/beginners/driving-leds-with-74ls-logic/
 ## Adventure: 32KB memory?
 
 ## Adventure: connect via USB [USB-to-TTL FTDI / PL2303, e.g., https://www.fanos.gr/en-gb/circuit-boards-arduino/circuit-boards/ft232rl-ftdi-usb-to-ttl-serial-module.html or https://www.hellasdigital.gr/electronics/prototyping/adapters/usb-to-ttl-4-pin-wire/
-
 -->

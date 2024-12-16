@@ -188,6 +188,11 @@
       <elementAttributes/>
       <pos x="1500" y="1080"/>
     </visualElement>
+    <visualElement>
+      <elementName>PolarityAwareLED</elementName>
+      <elementAttributes/>
+      <pos x="900" y="540"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
