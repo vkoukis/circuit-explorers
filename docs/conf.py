@@ -13,7 +13,7 @@ author = "Vangelis Koukis"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser", "sphinx_copybutton"]
+extensions = ["myst_parser", "sphinx_copybutton", "sphinx.ext.githubpages"]
 
 templates_path = ["templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
