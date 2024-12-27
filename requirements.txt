@@ -1,2 +1,4 @@
 sphinx
 sphinx-nefertiti
+myst-parser
+sphinx-copybutton

@@ -3,18 +3,59 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Circuit Explorers
-=================
+.. title:: Circuit Explorers
+
+.. image:: static/logo.png
+   :alt: Circuit Explorers logo
+   :align: center
+   :scale: 25%
+   :class: no-scaled-link
+
+Welcome to **Circuit Explorers**, a hands-on tutorial on exploring, designing,
+simulating, building, and testing digital circuits.
+
+🎯 **Goal:** To build a full-featured, programmable 8-bit computer using only
+chips in the `74LS family of integrated circuits
+<https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits>`_.
+
+📈 **Journey:** Circuit Explorers aims to be an educational journey where you
+start from zero knowledge of electronics to learn about analog and digital
+circuits via a set of **Adventures**, and eventually build your every own
+programmable CPU from scratch.
+
+Each adventure redirects you to curated documentation and video tutorials so
+you can quickly understand the basic concepts, and encourages you to experiment
+both by simulating circuits on your computer, and by building physical circuits
+to test them yourself.
+
+
+Development
+===========
+
+🚧 🚧 🚧 This is Work-in-Progress 🚧 🚧 🚧
+
+See the `Circuit Explorers repository <https://github.com/vkoukis/circuit-explorers>`_
+on GitHub on how to contribute to this project.
+
+
+Contact
+=======
+
+For all comments, bug reports, suggestions for improvements, please contact:
+
+* Vangelis Koukis <vkoukis@gmail.com>
+
+Looking forward hearing from you!
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+..
+   Indices and tables
+   ==================
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   * :ref:`genindex`
+   * :ref:`modindex`
+   * :ref:`search`
