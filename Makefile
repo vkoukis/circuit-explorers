@@ -31,8 +31,8 @@ docs: docs-build
 docs-build: venv
 	$(MAKE_VENV) -C docs html
 
-docs-clean:
-	make -C docs clean
+docs-clean: venv
+	$(MAKE_VENV) -C docs clean
 
 # Publish docs: Push to a specific branch at the same origin.
 # We have configured GitHub Pages to serve this branch,
@@ -76,5 +76,6 @@ docs-publish: docs-clean docs-build
 clean: docs-clean
 
 .PHONY: mrproper
-mrproper: clean clean-venv
+mrproper: clean-venv
 	-$(RMDIR) "$(BUILDDIR)"
+	-$(RMDIR) "$(PAGESDIR)"
