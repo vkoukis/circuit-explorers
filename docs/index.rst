@@ -11,6 +11,10 @@
    :scale: 25%
    :class: no-scaled-link
 
+.. image:: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+   :target: https://creativecommons.org/licenses/by-sa/4.0/
+   :alt: License: Creative Commons Attribution-ShareAlike 4.0 International
+
 Welcome to **Circuit Explorers**, a hands-on tutorial on exploring, designing,
 simulating, building, and testing digital circuits.
 
@@ -38,6 +42,12 @@ See the `Circuit Explorers repository <https://github.com/vkoukis/circuit-explor
 on GitHub on how to contribute to this project.
 
 
+License
+=======
+
+This work is licensed under the `Creative Commons Attribution-ShareAlike 4.0 International license <https://creativecommons.org/licenses/by-sa/4.0/>`_.
+
+
 Contact
 =======
 
@@ -51,6 +61,8 @@ Looking forward hearing from you!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+   adventures.md
 
 ..
    Indices and tables
