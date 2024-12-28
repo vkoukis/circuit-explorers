@@ -42,7 +42,7 @@ For all comments, bug reports, suggestions for improvements, please contact:
 
 * Vangelis Koukis &lt;vkoukis@gmail.com&gt;
 
-Looking forward hearing from you!
+Looking forward to hearing from you!
 
 
 ## License
