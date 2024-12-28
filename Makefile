@@ -80,7 +80,7 @@ docs-publish: docs-clean docs-build
 # Finally, bring out artifacts, and generate a new commit automatically.
 	cp -av $(BUILDDIR)/docs/html/. $(PAGESDIR)
 	$(GITPAGES) add -A
-	$(GITPAGES) commit -s --allow-empty -m "Auto-generated docs for version $(VERSION)"
+	$(GITPAGES) commit -s --allow-empty -m "Add auto-generated docs for version $(VERSION)"
 # We are ready to push everything to the remote. Woo hoo.
 	$(GITPAGES) push origin $(PAGES_BRANCH):$(PAGES_BRANCH)
 	@echo DOCS-PUBLISH: Successfully published docs to $(PAGES_GIT_REMOTE_URL)
