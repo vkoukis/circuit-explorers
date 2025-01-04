@@ -35,6 +35,63 @@ This is the repository where development for the public
 
 🚧 🚧 🚧 This is Work-in-Progress 🚧 🚧 🚧
 
+Here is how to contribute to this repository.
+The instructions below assume a Debian-like Linux system, e.g., Debian itself,
+or Ubuntu. They will also work on Debian inside Windows, using [Windows
+Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install).
+
+To get started, follow the [Contributing to a
+project](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
+guide on GitHub to fork this repository.
+
+Then, here is how to build the project locally:
+
+1. Install system-wide dependencies as the `root` user:
+   ```console
+   $ sudo apt install git make python3 inotify-tools
+   ```
+
+1. Clone your own fork of Circuit Explorers repository.
+   Replace the URL below with the URL of your own fork.
+   ```console
+   $ git clone https://github.com/vkoukis/circuit-explorers
+   ```
+
+1. Change into your new git working directory:
+   ```console
+   $ cd circuit-explorers
+   ```
+
+1. Build the project:
+   ```console
+   $ make
+   ```
+
+1. Open file `_build/docs/html/index.html` with your browser to see the result
+   of the build.
+
+And here is how to make your own changes:
+
+1. Watch the source directory for changes, and rebuild automatically:
+   ```console
+   $ make watch
+   ```
+   Leave this running inside a terminal window.
+
+1. Edit files locally using your favorite browser.
+   Notice `make watch` will rebuild all artifacts whenever you modify
+   files inside the repository.
+
+Finally, when you are satisfied with the results:
+
+1. Commit your changes locally
+1. Push to your cloned repository
+1. Submit a PR against the official repository for Circuit Explorers,
+   https://github.com/vkoukis/circuit-explorers.
+
+See the [Contributing to a
+project](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project) for detailed instructions.
+
 
 ## Contact
 
