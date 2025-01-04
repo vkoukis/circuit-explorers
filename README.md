@@ -19,7 +19,7 @@ chips in the [74LS family of integrated circuits](https://en.wikipedia.org/wiki/
 
 📈 **Journey:** Circuit Explorers aims to be an educational journey where you
 start from zero knowledge of electronics to learn about analog and digital
-circuits via a set of **Adventures**, and eventually build your every own
+circuits via a set of **Adventures**, and eventually build your own
 programmable CPU from scratch.
 
 Each adventure redirects you to curated documentation and video tutorials so
