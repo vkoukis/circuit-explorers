@@ -1,0 +1,714 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="colorset-reset" content="0" />
+    <meta name="docsearch:name" content="Circuit Explorers" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="" />
+    <meta name="docsearch:version" content="" />
+    
+      <title>Adventure 0: Ohm’s Law &mdash; Circuit Explorers  documentation</title>
+    
+    <link rel="canonical" href="adv-ohm/adv-ohm" />
+      <link rel="icon" href="../_static/logo.png" />
+          <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/sphinx-nefertiti-default.min.css?v=5aefbef3" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/nunito/stylesheet.css?v=0ed606bc" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/red-hat-mono/stylesheet.css?v=4eee5046" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-dark.css?v=589f9147" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-light.css?v=1620426e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/bootstrap-icons.min.css?v=44730005" /><!-- add (1) -->
+        <link rel="index" title="Index" href="../genindex.html" />
+        <link rel="search" title="Search" href="../search.html" />
+        <link rel="top" title="Circuit Explorers  documentation" href="#" />
+        <link rel="next" title="Circuit Explorers" href="../adventures.html" />
+        <link rel="prev" title="Development" href="../index.html" />
+    <style>
+      :root {
+        --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
+        --nftt-font-monospace: "Red Hat Mono", var(--nftt-font-family-monospace) !important;
+        --nftt-project-name-font: var(--nftt-body-font-family);
+        --nftt-documentation-font: var(--nftt-body-font-family);
+        --nftt-doc-headers-font: "Georgia", var(--nftt-documentation-font);}
+      h1 *, h2 *, h3 *, h4 *, h5 *, h6 * { font-size: inherit; }
+    </style>
+  </head>
+  <body>
+    <div id="back-to-top-container" class="position-fixed start-50 translate-middle-x">
+      <button id="back-to-top" type="button" class="d-none btn btn-neutral btn-sm shadow px-4" data-bs-toggle="button">Back to top</button>
+    </div>
+    <header id="snftt-nav-bar" class="navbar navbar-expand-xl navbar-dark nftt-navbar flex-column fixed-top">
+      <div class="skip-links container-fluid visually-hidden-focusable overflow-hidden justify-content-start flex-grow-1">
+        <div class="border-bottom mb-2 pb-2 w-100">
+          <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to docs navigation</a>
+          <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+        </div>
+      </div>
+      <nav class="container-xxl nftt-gutter flex-wrap flex-xl-nowrap" aria-label="Main navigation">
+        <div class="nftt-navbar-toggler">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Toggle documentation navigation">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+          <a
+            href="../index.html"
+            title="Circuit Explorers logo"
+            class="navbar-brand me-0 md-lg-2 pe-lg-4"
+          >
+            <img src="../_static/logo.png" width="100" height="100" alt="Circuit Explorers logo"
+              class="project-logo"
+            />
+            <span class="brand-text">Circuit Explorers</span>
+          </a>
+        
+        
+        <div class="d-flex d-xl-none">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttSearch" aria-controls="nfttSearch" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttNavbar" aria-controls="nfttNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+        </div>
+        
+<div class="offcanvas-xl offcanvas-end flex-grow-1" tabindex="-1" id="nfttSearch" aria-labelledby="nfttSearchOffcanvasLabel" data-bs-scroll="true">
+  <div class="offcanvas-header px-4 pb-0">
+    <h5 class="offcanvas-title fw-bold" id="nfttSearchOffcanvasLabel">Search the documentation</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttSearch"></button>
+  </div>
+  <div class="offcanvas-body p-4 pt-0 p-xl-0 ps-xl-4">
+    <hr class="d-xl-none text-white-50">
+    <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
+      <li class="nav-item col-12 col-xl-auto">
+        <form id="nftt-search-form" action="../search.html" method="get">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control search-input" placeholder="Search docs" aria-label="Search" aria-describedby="button-search">
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+            <button class="btn btn-primary" type="submit" id="button-search" aria-label="Search"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
+
+        <div class="offcanvas-xl offcanvas-end" tabindex="-1" id="nfttNavbar" aria-labelledby="nfttNavbarOffcanvasLabel" data-bs-scroll="true">
+          <div class="offcanvas-header px-4 pb-0">
+            <div class="offcanvas-title navbar-brand" id="nfttNavbarOffcanvasLabel"><span class="brand-text">Circuit Explorers</span></div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttNavbar"></button>
+          </div>
+          <div class="offcanvas-body p-4 pt-0 p-xl-0 px-xl-3">
+            <hr class="d-xl-none text-white-50">
+            <ul class="navbar-nav flex-row align-items-center flex-wrap ms-lg-auto">
+              
+              
+              
+              
+                <!-- colorssets-dropdown.html -->
+<li class="nav-item dropdown">
+  <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-color" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Toggle color set">
+    <i class="bi bi-palette"></i>
+    <span id="snftt-color-text" class="d-xl-none ms-2">Change color set</span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="snftt-color-text">
+    <li>
+      <h6 class="dropdown-header">Change color set</h6>
+    </li>
+    
+    <li>
+      <a class="dropdown-item d-flex align-items-center " data-snftt-colorset="blue" href="#" aria-pressed="false">
+        <span class="blue">
+          <i class="bi bi-circle-fill"></i>
+        </span>
+        <span class="ms-3">Blue</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    
+    <li>
+      <a class="dropdown-item d-flex align-items-center " data-snftt-colorset="indigo" href="#" aria-pressed="false">
+        <span class="indigo">
+          <i class="bi bi-circle-fill"></i>
+        </span>
+        <span class="ms-3">Indigo</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    
+    <li>
+      <a class="dropdown-item d-flex align-items-center " data-snftt-colorset="purple" href="#" aria-pressed="false">
+        <span class="purple">
+          <i class="bi bi-circle-fill"></i>
+        </span>
+        <span class="ms-3">Purple</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    
+    <li>
+      <a class="dropdown-item d-flex align-items-center " data-snftt-colorset="pink" href="#" aria-pressed="false">
+        <span class="pink">
+          <i class="bi bi-circle-fill"></i>
+        </span>
+        <span class="ms-3">Pink</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    
+    <li>
+      <a class="dropdown-item d-flex align-items-center " data-snftt-colorset="red" href="#" aria-pressed="false">
+        <span class="red">
+          <i class="bi bi-circle-fill"></i>
+        </span>
+        <span class="ms-3">Red</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    
+    <li>
+      <a class="dropdown-item d-flex align-items-center " data-snftt-colorset="orange" href="#" aria-pressed="false">
+        <span class="orange">
+          <i class="bi bi-circle-fill"></i>
+        </span>
+        <span class="ms-3">Orange</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    
+    <li>
+      <a class="dropdown-item d-flex align-items-center " data-snftt-colorset="yellow" href="#" aria-pressed="false">
+        <span class="yellow">
+          <i class="bi bi-circle-fill"></i>
+        </span>
+        <span class="ms-3">Yellow</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    
+    <li>
+      <a class="dropdown-item d-flex align-items-center " data-snftt-colorset="green" href="#" aria-pressed="false">
+        <span class="green">
+          <i class="bi bi-circle-fill"></i>
+        </span>
+        <span class="ms-3">Green</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    
+    <li>
+      <a class="dropdown-item d-flex align-items-center " data-snftt-colorset="teal" href="#" aria-pressed="false">
+        <span class="teal">
+          <i class="bi bi-circle-fill"></i>
+        </span>
+        <span class="ms-3">Teal</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    
+    <li>
+      <a class="dropdown-item d-flex align-items-center active" data-snftt-colorset="default" href="#" aria-pressed="false">
+        <span class="cyan">
+          <i class="bi bi-circle-fill"></i>
+        </span>
+        <span class="ms-3">Cyan</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    
+    <li><hr class="dropdown-divider" /></li>
+    <li>
+      <h6 class="dropdown-header">Neutral header</h6>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center " data-snftt-colorset-neutral="off" href="#" aria-pressed="false">
+        <i class="bi bi-noise-reduction"></i>
+        <span class="ms-3">Neutral</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+  </ul>
+</li>
+
+<li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+  <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white"></div>
+  <hr class="d-lg-none text-white-50">
+</li>
+              
+              <!-- colorscheme_dropdown.html -->
+<li class="nav-item dropdown">
+  <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Toggle light/dark">
+    <i class="bi bi-circle-half" data-snftt-luz-icon-active></i>
+    <span id="snftt-luz-text" class="d-xl-none ms-2">Toggle light/dark</span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="snftt-luz-text">
+    <li>
+      <h6 class="dropdown-header">Light/dark</h6>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="light" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-sun" data-snftt-luz-icon="light"></i>
+        </span>
+        <span class="ms-3">Light</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="dark" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-moon-stars" data-snftt-luz-icon="dark"></i>
+        </span>
+        <span class="ms-3">Dark</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item current d-flex align-items-center" data-snftt-luz="default" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-circle-half" data-snftt-luz-icon="default"></i>
+        </span>
+        <span class="ms-3">Default</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+  </ul>
+</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+
+    <div class="container-fluid flex-grow-1">
+      <div class="nftt-gutter nftt-page">
+        <aside class="nftt-sidebar ">
+          <div class="nftt-sidebar-content">
+            
+            <div class="title d-none d-xl-block">
+              <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Index</span>
+            </div>
+            <div id="sidebar" tabindex="-1" class="offcanvas-xl offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
+                <!-- sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
+  <h5 class="offcanvas-title fw-bold" id="nfttSidebarOffcanvasLabel">
+    Table of contents
+  </h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#sidebar"></button>
+</div>
+
+<div class="offcanvas-body">
+  <nav class="toc" aria-label="Main menu">
+    <div class="mb-3 p-1 pt-3 pb-4 border-bottom">
+      <input id="sidebar-filter" type="text" name="filter" class="form-control form-control-sm" placeholder="filter" aria-label="filter">
+    </div>
+    <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Adventure 0: Ohm’s Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adventures.html">Circuit Explorers</a></li>
+</ul>
+
+  </nav>
+  <template data-toggle-item-template>
+    <button class="btn btn-sm btn-link toctree-expand" type="button">
+      <i class="bi bi-caret-right"></i>
+      <span class="visually-hidden">Toggle menu contents</span>
+    </button>
+  </template>
+</div>
+            </div>
+            
+          </div>
+        </aside>
+        <article id="content" class="nftt-content" role="main">
+          <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../index.html">Start</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Adventure 0: Ohm’s Law</li>
+  </ol>
+</nav>
+    <section class="tex2jax_ignore mathjax_ignore" id="adventure-0-ohms-law">
+<h1>Adventure 0: Ohm’s Law<a class="headerlink" href="#adventure-0-ohms-law" title="Link to this heading">¶</a></h1>
+<section id="goal">
+<h2>Goal<a class="headerlink" href="#goal" title="Link to this heading">¶</a></h2>
+<p>Design your first circuit. First, simulate it on your computer. Then, create it
+on a breadboard.</p>
+<p>Understand <strong>Ohm’s law</strong> and experiment with different electrical components.</p>
+</section>
+<section id="simulate-circuit">
+<h2>Simulate circuit<a class="headerlink" href="#simulate-circuit" title="Link to this heading">¶</a></h2>
+<p>We will use an interactive circuit simulator running inside your browser to
+simulate a simple circuit. It was written by <a class="reference external" href="https://github.com/pfalstad/" rel="noreferer noopener" target="_blank">Paul
+Falstad</a> and enhanced by <a class="reference external" href="https://github.com/sharpie7" rel="noreferer noopener" target="_blank">Iain
+Sharp</a>.</p>
+<p>Watch this <a class="reference external" href="https://www.youtube.com/watch?v=_qOYj3onHAw" rel="noreferer noopener" target="_blank">video tutorial on Circuit
+Simulator</a> as an introduction to
+how it works.</p>
+<ol class="arabic">
+<li><p>Navigate to <a class="reference external" href="https://falstad.com/circuit/circuitjs.html" rel="noreferer noopener" target="_blank">Circuit Simulator</a>.
+Notice the application will open in a new tab in your browser. Drag the tab
+out into its own window, so you can have these instructions and the Circuit
+simulator open side-by-side.</p></li>
+<li><p>To concentrate on your circuits, press F11 to switch fullscreen mode on and
+off.</p></li>
+<li><p>Click <strong>File –&gt; New Blank Circuit</strong> to start with a new blank circuit.</p></li>
+<li><p>Add a voltage source, a resistor, and a ground wire to your circuit. Connect
+them with wires. Here is a screenshot that can help you find the tools you
+will need:</p>
+<p><img alt="Screenshot: Circuit Simulator - Voltage source, ground, resistor, wire" src="../_images/sshot-tools.png" /></p>
+</li>
+<li><p>Notice the mouse cursor changes when you are ready to draw a new component,
+compared to when you are moving components around. Use the <strong>Esc</strong> key to
+stop drawing components.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make sure Circuit Simulator reports no <strong>bad connection</strong>. Circuit Simulators
+highlights bad connections using <strong>red dots</strong>.</p>
+<p>Here is an example, where I thought the ground was connected to the wire,
+but it was not, it was floating instead. Notice the red dot and how the
+simulator reports <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">bad</span> <span class="pre">connection</span></code>:</p>
+<p><img alt="Screenshot: Circuit Simulator - Bad connection" src="../_images/sshot-badconnection.png" /></p>
+<p>To fix this, you need to delete the single wire and add two separate wires
+instead.</p>
+<p>Alternatively, you split the wire at the point where you want to connect
+your ground:</p>
+<ol class="arabic simple">
+<li><p>Hover over the wire, so the wire is selected</p></li>
+<li><p>Move the mouse cursor close to the red dot, but not <em>on</em> the red do</p></li>
+<li><p>Hold down the <strong>Ctrl</strong> key and click, so you split the wire at this
+point, and a new node appears where it connects with ground.</p></li>
+</ol>
+</div>
+</li>
+<li><p>Click the <strong>RUN / Stop</strong> button to start the simulation, and see the current
+flow! At this point your circuit should look something like this:</p>
+<p><img alt="Screenshot: Circuit Simulator: Ohm's law" src="../_images/sshot-ohm.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>If you make a mistake, use Ctrl-Z to undo.</p></li>
+<li><p>Hover your mouse over the different selections in the UI, a tooltip will
+appear.</p></li>
+<li><p>Notice there are useful <em>keyboard shortcuts</em> for all components you need
+to add. For example press <strong>r</strong> to insert a new resistor. Explore to find
+more!</p></li>
+<li><p>Click <strong>Edit –&gt; Center Circuit</strong> to center your circuit. Also find
+commands to zoom in and out of your circuit in the <strong>Edit</strong> menu.</p></li>
+<li><p>If you close your browser window by mistake, use <strong>File –&gt; Recover
+Auto-Save</strong> to bring back your latest work.</p></li>
+</ul>
+</div>
+</li>
+</ol>
+<!-- See https://myst-parser.readthedocs.io/en/latest/syntax/admonitions.html#collapsible-admonitions -->
+<p>If you would like some help with creating the circuit, see below.</p>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Here is an example of the finished circuit: <a class="reference external" href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKADcRD8QAWHvTt2wIUUMT1piqMBCwBOggcNF44IZWLDwWAcxAZIPXv32HexQlJYB3EKqob7xgZBuLnpo3xduDXk07eUCxAA" rel="noreferer noopener" target="_blank">Circuit - Ohm’s law</a></p>
+</div>
+<ol class="arabic">
+<li><p>Notice the current flows around your circuit, through the resistor.
+Hover your mouse over the resistor, and notice the values shown inside
+the box on the lower-right corner. Notice the resistance of this component,
+it’s <span class="math notranslate nohighlight">\(R = 1kΩ\)</span>. Notice the value for the <strong>current</strong> flowing through the
+resistor. <span class="math notranslate nohighlight">\(I = 5mA\)</span>. Notice the value for the <strong>voltage drop</strong> around the
+resistor, it’s <span class="math notranslate nohighlight">\(V_d = 5V\)</span>.</p></li>
+<li><p>Double click the voltage source and change its voltage to <code class="docutils literal notranslate"><span class="pre">10</span></code>, i.e., <span class="math notranslate nohighlight">\(10V\)</span>.
+Hover over the resistor again, how much is the current flowing through
+the circuit now?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Notice it is <em>double</em>, <span class="math notranslate nohighlight">\(I = 10mA\)</span>. Double the voltage, double the current.</p>
+</div>
+</li>
+<li><p>What happens to the current if you double the resistance? Double click the
+resistor, set it to <code class="docutils literal notranslate"><span class="pre">2k</span></code>, i.e., <span class="math notranslate nohighlight">\(2kΩ\)</span>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p><em>Double</em> the resistance, <em>half</em> the current.</p>
+</div>
+</li>
+<li><p>Notice the current flowing through the circuit depends on the voltage of the
+source and the resistance of the resistor.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Ohm’s law</strong> determines how much current flows through a resistor:
+<div class="math notranslate nohighlight">
+\[I = {V \over R}\]</div>
+</p>
+<p>This means that for each resistor we can always find one of <span class="math notranslate nohighlight">\(I\)</span>, <span class="math notranslate nohighlight">\(V\)</span>, or
+<span class="math notranslate nohighlight">\(R\)</span>, if we know the other two:</p>
+<div class="math notranslate nohighlight">
+\[
+I = {V \over R} \qquad R = {V \over I} \qquad V = I \times R
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ohm’s law only applies to <em>ideal</em> resistors, which we also call <em>resistive</em>,
+or <em>ohmic</em> laws. We will see there are other types of loads, like diodes,
+and capacitors, later on.</p>
+</div>
+</div>
+</li>
+<li><p>Double click the voltage source, make sure it’s set to <span class="math notranslate nohighlight">\(5V\)</span>. What should the
+resistance be to have a current of <span class="math notranslate nohighlight">\(I = 25mA\)</span> flow through the circuit? Use
+Ohm’s law to compute it.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Let’s use Ohm’s law:
+<div class="math notranslate nohighlight">
+\[
+R = {V \over I} = {5V \over 25mA} = {5 \over {25 \cdot 10^{-3}}} =
+{5000V \over 25A} = 200Ω
+\]</div>
+</p>
+</div>
+</li>
+<li><p>Set the resistor’s value to the one you just computed. How much current
+flows through the circuit?</p></li>
+<li><p>Hover over different <strong>wires</strong>. Notice the same current, <span class="math notranslate nohighlight">\(I\)</span> flows through
+every part of the circuit. Notice the voltage drop is zero, <span class="math notranslate nohighlight">\(V_d = 0\)</span>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Wires are <em>ideal</em> and have zero resistance. Their length does not matter,
+their resistance is always <span class="math notranslate nohighlight">\(R = 0\)</span>, so the voltage drop around them is
+always <span class="math notranslate nohighlight">\(V_d = 0\)</span>.</p>
+</div>
+</li>
+<li><p>Hover over different <strong>nodes</strong> in the circuit. How much is the voltage at
+the two ends of the resistor?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Notice one end is at <span class="math notranslate nohighlight">\(5V\)</span>, because it is connected to the long end of the
+voltage source – the <em>positive</em> end – and one end is at <span class="math notranslate nohighlight">\(0V\)</span>, because it
+is connected to ground.</p>
+</div>
+</li>
+<li><p>Experiment with different values of <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(R\)</span> for the voltage source and
+resistor, respectively. Confirm Ohm’s law applies.</p></li>
+</ol>
+</section>
+<section id="build-circuit">
+<h2>Build circuit<a class="headerlink" href="#build-circuit" title="Link to this heading">¶</a></h2>
+<p>Grab your breadboard! it’s time to build the actual circuit, and use a
+multimeter to measure voltages and currents.</p>
+<p>Breadboard</p>
+<ol class="arabic">
+<li><p>Notice your breadboard. Notice it has holes arranged in columns and rows.
+The holes are all connected in a specific pattern, watch this <a class="reference external" href="https://www.youtube.com/shorts/QKsVPHKTNOw" rel="noreferer noopener" target="_blank">video on how
+breadboard workis</a> to understand
+more.</p></li>
+<li><p>Take your multimeter and set it to the 🎵 position. Touch the probes
+together, confirm that the meter beeps. This means there it detects an
+electrical connection between the two probes – very small resistance.</p></li>
+<li><p>Test different pairs of holes using your multimeter. When does it beep, and
+why?</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Use the probe wires with crocodile clips at the end and clip them on small
+wires, so you can put them in the holes of the breadboard.</p>
+</div>
+</li>
+<li><p>Set your multimeter to <strong>Ω - 200</strong> or a similar range. This means it can
+measure resistors up to <code class="docutils literal notranslate"><span class="pre">200Ω</span></code>. Take an 150Ω resistor and measure it, what
+value does the multimeter show? Why is it not exactly 150Ω?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>No component is ideal in the real world. Resistors are built with
+<em>tolerance</em>. Also, resistance depends on environmental factors, e.g.,
+ambient temperature.</p>
+</div>
+</li>
+<li><p>Take a <strong>DC chassis connector [5.50mm x 2.1mm]</strong>, it should look similar to
+<a class="reference external" href="https://www.fanos.gr/en-gb/connectors/dc-connectors/dc-connector-5-5-x-2-1mm-html" rel="noreferer noopener" target="_blank">this
+one</a>.
+Find out which pins correspond to the round part and the pin of the barrel
+plug. Connect two small wires at each pin, so you can then insert them in
+the breadboard. Insert the wire that corresponds to the pin in the <strong>(+)</strong>
+bar, and the wire that corresponds to the round part in the <strong>(-)</strong> bar. The
+(+) bar will be your “VCC” [supply voltage], the (-) bar will be your GND
+[ground].</p></li>
+<li><p>Take a <strong>USB charger</strong> and connect it to your wall outlet. Take a <strong>USB A
+–&gt; DC 5.50 x 2.10mm cable</strong> – it should look similar to <a class="reference external" href="https://www.skroutz.gr/s/24015538/Powertech-USB-2-0-Cable-USB-A-male-DC-5-5x2-5mm-Mayro-1-5m-CAB-U121.html" rel="noreferer noopener" target="_blank">this
+one</a>
+– and use it to connect the USB charger with the chassis connector on your
+breadboard.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>NEVER</strong> connect anything else to your wall outlet <em>except</em> the USB charger.
+Wall outlets supply <strong>extremely dangerous</strong> voltages, 110V or 220V.</p>
+</div>
+</li>
+<li><p>Set your multimeter to “V - 20V” or a similar range. Measure voltage across
+the breadboard. How much voltage does the USB charger supply to your
+breadboard? Ensure you are measuring around <span class="math notranslate nohighlight">\(5V\)</span>. Note down this value. Why
+is it not exactly <span class="math notranslate nohighlight">\(5.00V\)</span>?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>No component is ideal in the real world. Voltage sources do not supply a
+constant voltage, their voltage actually depends on the current that flows
+through the circuit, and other factors.</p>
+</div>
+</li>
+<li><p>The polarity – the sign of the measurement – is important! Make sure to
+place the red lead on (+), the black lead on (-). What happens if you
+reverse them?</p></li>
+<li><p>Build your circuit. Choose a resistor around 150Ω, and connect between the
+VCC and GND bars. Current is now flowing through the resistor! How much
+current do you expect is now flowing? Use Ohm’s law to compute it.</p></li>
+<li><p>Measure this current. Connect your multimeter <em>in series</em> with the resistor,
+that is between VCC and the resistor, or between the resistor and ground.
+Set it to “DC A - 200m” or similar. How much current do you measure?
+How does it compare to your estimate in the previous step?
+What happens if your reverse the probes?</p></li>
+<li><p>Measure the voltage between VCC and GND again. Is it the same as when no
+current was flowing through the circuit? Keep the multimeter connected, and
+connect and disconnect one leg of the resistor, to close and open the
+circuit. What do you notice?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>The voltage changes, because the USB charger is a real-world component,
+and not an ideal voltage source. It is slightly lower when current flows
+through the circuit.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="celebrate">
+<h2>Celebrate<a class="headerlink" href="#celebrate" title="Link to this heading">¶</a></h2>
+<p>Congratulations! You’ve simulated and built your first circuit.
+Here are more things to explore, as you prepare to embark on your next
+adventure.</p>
+<ul>
+<li><p>What happens if you connect two resistors <em>in series</em>, one after the other?
+That is, you insert one more resistor <em>between</em> one leg of the existing
+resistor, and VCC or GND. Simulate the circuit and build it on your
+breadboard.</p>
+<p>Here is what your circuit should look like:</p>
+<p><img alt="Screenshot: Circuit Simulator: Ohm's law - Resistors in series" src="../_images/sshot-ohm-series.png" /></p>
+</li>
+<li><p>What happens if you connect two resistors <em>in parallel</em>? That is, you insert
+one more resistor which touches exactly the same points as the existing
+resistor. They both connect to VCC and GND at the same time.</p>
+<p>Here is what your circuit should look like:</p>
+<p><img alt="Screenshot: Circuit Simulator: Ohm's law - Resistors in parallel" src="../_images/sshot-ohm-parallel.png" /></p>
+</li>
+</ul>
+<p>Here are more resources to explore:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Voltage_source" rel="noreferer noopener" target="_blank">Wikipedia: Voltage source</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ohm%27s_law" rel="noreferer noopener" target="_blank">Wikipedia: Ohm’s law</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pfalstad/circuitjs1" rel="noreferer noopener" target="_blank">GitHub repository for Circuit Simulator</a></p></li>
+<li><p><a class="reference external" href="https://lushprojects.com/circuitjs/" rel="noreferer noopener" target="_blank">Iain Sharp’s page on Circuit Simulator</a></p></li>
+</ul>
+<div class="docutils">
+</div>
+</section>
+</section>
+
+</article>
+        <aside class="nftt-toc my-3">
+          
+          <div class="my-sm-1 my-lg-0 ps-xl-3 text-muted">
+            <button class="btn btn-link link-dark p-lg-0 mb-2 mb-lg-0 text-decoration-none nftt-toc-toggle d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents"
+            >On this page <i class="ms-2 bi bi-chevron-expand"></i></button>
+            <div class="title d-none d-lg-block">
+              <i class="bi bi-file-earmark-text"></i>&nbsp;&nbsp;<span class="small">On this page</span>
+            </div>
+            <div class="collapse nftt-toc-collapse" id="tocContents">
+              <nav id="TableOfContents">
+                <ul>
+<li><a class="reference internal" href="#">Adventure 0: Ohm’s Law</a><ul>
+<li><a class="reference internal" href="#goal">Goal</a></li>
+<li><a class="reference internal" href="#simulate-circuit">Simulate circuit</a></li>
+<li><a class="reference internal" href="#build-circuit">Build circuit</a></li>
+<li><a class="reference internal" href="#celebrate">Celebrate</a></li>
+</ul>
+</li>
+</ul>
+
+              </nav>
+            </div>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+
+    <footer class="nftt-footer">
+      <nav id="paginator" class="py-4" aria-label="Documentation navigation">
+    <div class="container">
+      <ul class="pagination justify-content-between mb-0"><li class="d-flex page-item">
+            <a href="../index.html" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: Development">
+              <span class="prev-page"><i class="bi bi-caret-left"></i></span>
+              <div class="d-none d-sm-flex flex-column">
+                <span class="text-small text-start text-muted">Previous</span>
+                <span class="underline">Development</span>
+              </div>
+            </a>
+          </li>
+        <li class="d-flex page-item ms-auto">
+            <a href="../adventures.html" class="d-flex px-5 align-items-end" rel="next" aria-label="Next page: Circuit Explorers">
+              <div class="d-flex flex-column">
+                <span class="text-small text-end text-start text-muted">Next</span>
+                <span class="underline">Circuit Explorers</span>
+              </div>
+              <span class="next-page"><i class="bi bi-caret-right"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+      <div class="py-5 px-4 px-md-3">
+  <div class="container">
+    
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a class="brand-text d-inline-flex align-items-center mb-2 text-decoration-none" href="/" aria-label="Nefertiti-for-Sphinx">
+          <span class="fs-6 fw-bold">Circuit Explorers</span>
+        </a>
+        
+          <ul class="list-unstyled small text-muted">
+            <li>2024, Vangelis Koukis</li>
+          </ul>
+        
+        
+        <div class="built-with pt-2">
+          Built with <a href="http://sphinx-doc.org">Sphinx 8.1.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.7.3</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    </footer>
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/colorsets.js?v=93c30d22"></script>
+    <script src="../_static/docs-versions.js?v=08b0cbfb"></script>
+    <script src="../_static/sphinx-nefertiti.min.js?v=dfd9d24d"></script>
+    <script src="../_static/bootstrap.bundle.min.js?v=ff4e7878"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </body>
+</html>

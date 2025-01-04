@@ -63,6 +63,7 @@ Looking forward hearing from you!
    :maxdepth: 2
    :caption: Contents:
 
+   adv-ohm/adv-ohm.md
    adventures.md
 
 ..
