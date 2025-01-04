@@ -31,6 +31,7 @@ $(warning Detecting the git remote URL failed. \
 	$$PAGES_GIT_REMOTE_URL explicitly)
 endif
 
+
 all: docs
 
 include Makefile.venv
@@ -38,15 +39,29 @@ include Makefile.venv
 # A version of $(MAKE) which runs inside the managed Python virtualenv
 MAKE_VENV := . _venv/bin/activate && make
 
+
 .PHONY: docs
 docs: docs-build
+
 
 .PHONY: docs-build
 docs-build: venv
 	$(MAKE_VENV) -C docs html
 
+
+.PHONY:
 docs-clean: venv
 	$(MAKE_VENV) -C docs clean
+
+
+.PHONY: watch
+watch:
+	@while true; do \
+		inotifywait -r -e close_write,move,create,delete,modify,attrib .; \
+		echo "*** New changes detected. Rebuilding..."; \
+		$(MAKE); \
+	done
+
 
 # Publish docs: Push to a specific branch at the same origin.
 # We have configured GitHub Pages to serve this branch,
@@ -88,6 +103,7 @@ docs-publish: docs-clean docs-build
 
 .PHONY: clean
 clean: docs-clean
+
 
 .PHONY: mrproper
 mrproper: clean-venv
