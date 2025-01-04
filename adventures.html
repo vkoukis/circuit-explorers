@@ -19,6 +19,7 @@
       <link rel="icon" href="_static/logo.png" />
           <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="_static/sphinx-nefertiti-default.min.css?v=5aefbef3" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="_static/fonts/nunito/stylesheet.css?v=0ed606bc" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="_static/fonts/red-hat-mono/stylesheet.css?v=4eee5046" /><!-- add (1) -->
@@ -332,18 +333,18 @@
     <li class="breadcrumb-item active" aria-current="page">Circuit Explorers</li>
   </ol>
 </nav>
-    <section id="circuit-explorers">
+    <section class="tex2jax_ignore mathjax_ignore" id="circuit-explorers">
 <h1>Circuit Explorers<a class="headerlink" href="#circuit-explorers" title="Link to this heading">¶</a></h1>
 <p>A hands-on tutorial on exploring, designing, simulating, building, and testing
 digital circuits.</p>
 <p><em>Goal:</em> Build a full-featured, programmable 8-bit computer using only chips
-in the <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits">74LS family of integrated circuits</a>.</p>
+in the <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits" rel="noreferer noopener" target="_blank">74LS family of integrated circuits</a>.</p>
 <section id="adventure-0-install-digital-run-tutorial">
 <h2>Adventure 0: Install Digital, run tutorial<a class="headerlink" href="#adventure-0-install-digital-run-tutorial" title="Link to this heading">¶</a></h2>
-<p><em>Goal:</em> Install <a class="reference external" href="https://github.com/hneemann/Digital">Digital</a>.
+<p><em>Goal:</em> Install <a class="reference external" href="https://github.com/hneemann/Digital" rel="noreferer noopener" target="_blank">Digital</a>.
 Run its tutorial and simulate a logic circuit.</p>
 <ol class="arabic simple">
-<li><p>Download and install <a class="reference external" href="https://github.com/hneemann/Digital">Digital</a>.</p>
+<li><p>Download and install <a class="reference external" href="https://github.com/hneemann/Digital" rel="noreferer noopener" target="_blank">Digital</a>.</p>
 <ol class="arabic simple">
 <li><p>Install Temurin for Windows x64 from https://adoptium.net/</p></li>
 <li><p>Download Digital from GitHub</p></li>
@@ -397,7 +398,7 @@ then add them back gradually.</p>
 </li>
 <li><p>Notice how some wires are light green, some others are dark green, depending
 on whether their current state is  <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code>, respectively.</p></li>
-<li><p>Write down the <a class="reference external" href="https://www.geeksforgeeks.org/logic-gates/">truth table</a> for
+<li><p>Write down the <a class="reference external" href="https://www.geeksforgeeks.org/logic-gates/" rel="noreferer noopener" target="_blank">truth table</a> for
 each one of the gates, according to your testing.</p></li>
 <li><p>Navigate to Analysis –&gt; Analysis in the menu. See Digital produce the truth
 table for each one of your outputs automatically.</p></li>
@@ -410,7 +411,7 @@ table for each one of your outputs automatically.</p></li>
 in Digital.</p>
 <ol class="arabic">
 <li><p>Have a look at the list of logic gates in the 74LS family
-(<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits#Logic_gates">Wikipedia</a>)
+(<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits#Logic_gates" rel="noreferer noopener" target="_blank">Wikipedia</a>)
 of integrated circuits (“chips”, “ICs”). We care about the “Normal inputs /
 push-pull outputs” category.</p></li>
 <li><p>See we will be using chips 74LS04, 74LS08, 74LS32, 74LS86, 74LS00, 74LS02,
@@ -457,7 +458,7 @@ complain with an error message similar to this:</p>
 </pre></div>
 </div>
 <p>If this happens, make sure you have connected every single input to either
-VCC or GND, and try again. See <a class="reference external" href="https://github.com/hneemann/Digital/issues/36">this issue in Digital</a>
+VCC or GND, and try again. See <a class="reference external" href="https://github.com/hneemann/Digital/issues/36" rel="noreferer noopener" target="_blank">this issue in Digital</a>
 for technical details.</p>
 </li>
 <li><p>Compare the truth table of your new circuit to the truth table of Adventure
@@ -483,27 +484,27 @@ these tools throughout the tutorial:</p>
 <tr class="row-even"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>needle nose pliers</p></td>
 <td class="text-left"><p></p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1/%CE%BC%CF%85%CF%84%CE%BF%CF%84%CF%83%CE%B9%CE%BC%CF%80%CE%B9%CE%B4%CE%B1-%CF%80%CE%B5%CE%BD%CF%83%CE%B5%CF%82/%CE%BC%CF%85%CF%84%CE%BF%CF%84%CF%83%CE%AF%CE%BC%CF%80%CE%B9%CE%B4%CE%BF-%CE%BC%CE%B1%CE%BA%CF%81%CF%8D-pn2007-piergiacomi.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1/%CE%BC%CF%85%CF%84%CE%BF%CF%84%CF%83%CE%B9%CE%BC%CF%80%CE%B9%CE%B4%CE%B1-%CF%80%CE%B5%CE%BD%CF%83%CE%B5%CF%82/%CE%BC%CF%85%CF%84%CE%BF%CF%84%CF%83%CE%AF%CE%BC%CF%80%CE%B9%CE%B4%CE%BF-%CE%BC%CE%B1%CE%BA%CF%81%CF%8D-pn2007-piergiacomi.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>wire cutter</p></td>
 <td class="text-left"><p></p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1/%CE%BA%CF%8C%CF%86%CF%84%CE%B5%CF%82/%CE%BA%CF%8C%CF%86%CF%84%CE%B7%CF%82-%CF%80%CE%BB%CE%AC%CE%B3%CE%B9%CE%BF%CF%82-tre03nb-piergiacomi.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1/%CE%BA%CF%8C%CF%86%CF%84%CE%B5%CF%82/%CE%BA%CF%8C%CF%86%CF%84%CE%B7%CF%82-%CF%80%CE%BB%CE%AC%CE%B3%CE%B9%CE%BF%CF%82-tre03nb-piergiacomi.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>wire stripper</p></td>
 <td class="text-left"><p></p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1/%CE%B1%CF%80%CE%BF%CE%B3%CF%85%CE%BC%CE%BD%CF%89%CF%84%CE%AD%CF%82/%CE%B1%CF%80%CE%BF%CE%B3%CF%85%CE%BC%CE%BD%CF%89%CF%84%CE%AE%CF%82-yy-78318.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1/%CE%B1%CF%80%CE%BF%CE%B3%CF%85%CE%BC%CE%BD%CF%89%CF%84%CE%AD%CF%82/%CE%B1%CF%80%CE%BF%CE%B3%CF%85%CE%BC%CE%BD%CF%89%CF%84%CE%AE%CF%82-yy-78318.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>multimeter</p></td>
 <td class="text-left"><p></p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1/%CF%8C%CF%81%CE%B3%CE%B1%CE%BD%CE%B1-%CE%BC%CE%AD%CF%84%CF%81%CE%B7%CF%83%CE%B7%CF%82/%CF%80%CE%BF%CE%BB%CF%8D%CE%BC%CE%B5%CF%84%CF%81%CE%B1/%CF%88%CE%B7%CF%86%CE%B9%CE%B1%CE%BA%CE%AC-dvm/%CF%88%CE%B7%CF%86%CE%B9%CE%B1%CE%BA%CF%8C-%CF%80%CE%BF%CE%BB%CF%8D%CE%BC%CE%B5%CF%84%CF%81%CE%BF-uni-t-ut39c.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%AF%CE%B1/%CF%8C%CF%81%CE%B3%CE%B1%CE%BD%CE%B1-%CE%BC%CE%AD%CF%84%CF%81%CE%B7%CF%83%CE%B7%CF%82/%CF%80%CE%BF%CE%BB%CF%8D%CE%BC%CE%B5%CF%84%CF%81%CE%B1/%CF%88%CE%B7%CF%86%CE%B9%CE%B1%CE%BA%CE%AC-dvm/%CF%88%CE%B7%CF%86%CE%B9%CE%B1%CE%BA%CF%8C-%CF%80%CE%BF%CE%BB%CF%8D%CE%BC%CE%B5%CF%84%CF%81%CE%BF-uni-t-ut39c.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>small organizer box</p></td>
 <td class="text-left"><p></p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%BA%CE%BF%CF%85%CF%84%CE%B9%CE%AC-%CE%B1%CF%80%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%85%CF%83%CE%B7%CF%82-%CE%BA%CE%B1%CE%B9-%CE%BA%CE%B1%CF%84%CE%B1%CF%83%CE%BA%CE%B5%CF%85%CF%8E%CE%BD/%CE%BA%CE%BF%CF%85%CF%84%CE%B9%CE%AC-%CE%B1%CF%80%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%85%CF%83%CE%B7%CF%82/%CE%BA%CE%BF%CF%85%CF%84%CE%B9-%CE%B1%CF%80%CE%BF%CE%B8%CE%B7%CE%BA%CE%B5%CF%85%CF%83%CE%B7%CF%83-76x61x21-903133s-t-proskit.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%BA%CE%BF%CF%85%CF%84%CE%B9%CE%AC-%CE%B1%CF%80%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%85%CF%83%CE%B7%CF%82-%CE%BA%CE%B1%CE%B9-%CE%BA%CE%B1%CF%84%CE%B1%CF%83%CE%BA%CE%B5%CF%85%CF%8E%CE%BD/%CE%BA%CE%BF%CF%85%CF%84%CE%B9%CE%AC-%CE%B1%CF%80%CE%BF%CE%B8%CE%AE%CE%BA%CE%B5%CF%85%CF%83%CE%B7%CF%82/%CE%BA%CE%BF%CF%85%CF%84%CE%B9-%CE%B1%CF%80%CE%BF%CE%B8%CE%B7%CE%BA%CE%B5%CF%85%CF%83%CE%B7%CF%83-76x61x21-903133s-t-proskit.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -525,42 +526,42 @@ these tools throughout the tutorial:</p>
 <tr class="row-odd"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>breadboard</p></td>
 <td class="text-left"><p>Breadboard</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/electronic-components/boards-testing-boards/solderless-breadboard-mb-102.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/electronic-components/boards-testing-boards/solderless-breadboard-mb-102.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>65-piece jumper wire kit</p></td>
 <td class="text-left"><p>Many small jumper wires to use with the breadboard</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/electronic-components/jumpers-pinheaders/65pcs-flexible-breadboard-jumper-wires.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/electronic-components/jumpers-pinheaders/65pcs-flexible-breadboard-jumper-wires.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>74LS04</p></td>
 <td class="text-left"><p>Hex inverter</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls04.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls04.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>74LS08</p></td>
 <td class="text-left"><p>Quad 2-input AND gate</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls08.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls08.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>74LS32</p></td>
 <td class="text-left"><p>Quad 2-input OR gate</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls32.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls32.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>74LS00</p></td>
 <td class="text-left"><p>Quad 2-input NAND gate</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls00.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls00.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>74LS02</p></td>
 <td class="text-left"><p>Quad 2-input NOR gate</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls02.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls02.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>74LS86</p></td>
 <td class="text-left"><p>Quad 2-input XOR gate</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls86.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/semiconductors/circuit-chips/gate-ls/74ls86.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>74LS7266</p></td>
@@ -570,17 +571,17 @@ these tools throughout the tutorial:</p>
 <tr class="row-even"><td class="text-left"><p>2</p></td>
 <td class="text-left"><p>SPDT switch</p></td>
 <td class="text-left"><p>Single Pole Double Throw Switch</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/switches/slide-switch/slide-switch-on-on-spdt-12d01.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/switches/slide-switch/slide-switch-on-on-spdt-12d01.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p>3</p></td>
 <td class="text-left"><p>LED, red</p></td>
 <td class="text-left"><p>LED, red 2-2.5V, 20mA</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CF%80%CE%B7%CE%B3%CE%AD%CF%82-%CF%86%CF%89%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D/led/10mm/led-10mm-%CE%BA%CF%8C%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%85-%CF%87%CF%81%CF%8E%CE%BC%CE%B1%CF%84%CE%BF%CF%82-l813id-40-150mcd-html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CF%80%CE%B7%CE%B3%CE%AD%CF%82-%CF%86%CF%89%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D/led/10mm/led-10mm-%CE%BA%CF%8C%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%85-%CF%87%CF%81%CF%8E%CE%BC%CE%B1%CF%84%CE%BF%CF%82-l813id-40-150mcd-html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p>3</p></td>
 <td class="text-left"><p>120-150Ω resistors</p></td>
 <td class="text-left"><p>Resistors, 1W</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BE%CE%B1%CF%81%CF%84%CE%B7%CE%BC%CE%B1%CF%84%CE%B1/%CE%91%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AC%CF%83%CE%B5%CE%B9%CF%82,%20antistaseis,%20%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7,%20antistasi/%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7-1W/%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CE%B1%CF%83%CE%B7-120-%CF%89-1w.html">Fanos</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BE%CE%B1%CF%81%CF%84%CE%B7%CE%BC%CE%B1%CF%84%CE%B1/%CE%91%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AC%CF%83%CE%B5%CE%B9%CF%82,%20antistaseis,%20%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7,%20antistasi/%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7-1W/%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CE%B1%CF%83%CE%B7-120-%CF%89-1w.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -710,9 +711,15 @@ A typical 74LS00 output pin can sink significant current to drive a standard LED
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/colorsets.js?v=93c30d22"></script>
     <script src="_static/docs-versions.js?v=08b0cbfb"></script>
     <script src="_static/sphinx-nefertiti.min.js?v=dfd9d24d"></script>
     <script src="_static/bootstrap.bundle.min.js?v=ff4e7878"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
   </body>
 </html>

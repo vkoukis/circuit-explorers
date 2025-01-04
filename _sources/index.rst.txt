@@ -38,8 +38,9 @@ Development
 
 🚧 🚧 🚧 This is Work-in-Progress 🚧 🚧 🚧
 
-See the `Circuit Explorers repository <https://github.com/vkoukis/circuit-explorers>`_
-on GitHub on how to contribute to this project.
+See the `Circuit Explorers repository
+<https://github.com/vkoukis/circuit-explorers>`_ on GitHub for instructions on
+how to contribute to this project.
 
 
 License
