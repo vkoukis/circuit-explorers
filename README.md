@@ -90,7 +90,7 @@ Finally, when you are satisfied with the results:
    https://github.com/vkoukis/circuit-explorers.
 
 See the [Contributing to a
-project](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project) for detailed instructions.
+project](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project) guide on GitHub for detailed instructions.
 
 
 ## Contact
