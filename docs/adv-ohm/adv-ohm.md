@@ -74,7 +74,7 @@ how it works.
 
    :::{hint}
    :class: dropdown
-   Here is an example of the finished circuit: [Circuit - Ohm's law](https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKADcRD8QAWHvTt2wIUUMT1piqMBCwBOggcNF44IZWLDwWAcxAZIPXv32HexQlJYB3EKqob7xgZBuLnpo3xduDXk07eUCxAA)
+   Here is an example of the finished circuit: [Circuit - Ohm's law](https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKADcRD8QAWHvTt2wIUUMT1piqMBCwBOggcNF44IZWLDwWAcxAZIPXv32HexQlJYB3EKqob7xgZBuLnpo3xduDXk07eUCxAA).
    :::
 
 1. Explore: Change your circuit, move things around, delete components and
@@ -181,6 +181,16 @@ how it works.
 1. Experiment with different values of $V$ and $R$ for the voltage source and
    resistor, respectively. Confirm Ohm's law applies.
 
+1. **Save** your work: Click **File --> Save As...**, name your file, and click
+   **OK** to download it. Later on, use **File --> Open File...** to load
+   your saved circuit.
+
+   :::{tip}
+   If you close your browser window without having saved your work, remember
+   you can always click **File --> Recover Auto-Save** to return to your
+   latest circuit.
+   :::
+
 
 ## Build circuit
 
@@ -206,7 +216,7 @@ multimeter to measure voltages and currents:
    :::
 
 1. Set your multimeter to **Ω - 200** or a similar range. This means it can
-   measure resistors up to `200Ω`. Take an 150Ω resistor and measure it, what
+   measure resistors up to `200Ω`. Take a 150Ω resistor and measure it, what
    value does the multimeter show? Why is it not exactly 150Ω?
 
    :::{admonition} Answer
@@ -304,6 +314,7 @@ adventure.
 
 Here are more resources to explore:
 
+:::{seealso}
 * [Wikipedia: Voltage source](https://en.wikipedia.org/wiki/Voltage_source)
 * [Wikipedia: Ohm's law](https://en.wikipedia.org/wiki/Ohm%27s_law)
 

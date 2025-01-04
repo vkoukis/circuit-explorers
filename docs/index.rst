@@ -60,10 +60,11 @@ Looking forward hearing from you!
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    adv-ohm/adv-ohm.md
+   adv-series/adv-series.md
    adventures.md
 
 ..
