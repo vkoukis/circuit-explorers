@@ -13,9 +13,9 @@
     <meta name="docsearch:release" content="" />
     <meta name="docsearch:version" content="" />
     
-      <title>Adventure 0: Ohm’s Law &mdash; Circuit Explorers  documentation</title>
+      <title>Adventure 1a: Equivalent resistance: Resistors in series &mdash; Circuit Explorers  documentation</title>
     
-    <link rel="canonical" href="adv-ohm/adv-ohm" />
+    <link rel="canonical" href="adv-series/adv-series" />
       <link rel="icon" href="../_static/logo.png" />
           <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" /><!-- add (1) -->
@@ -29,8 +29,8 @@
         <link rel="index" title="Index" href="../genindex.html" />
         <link rel="search" title="Search" href="../search.html" />
         <link rel="top" title="Circuit Explorers  documentation" href="#" />
-        <link rel="next" title="Adventure 1a: Equivalent resistance: Resistors in series" href="../adv-series/adv-series.html" />
-        <link rel="prev" title="Development" href="../index.html" />
+        <link rel="next" title="Circuit Explorers" href="../adventures.html" />
+        <link rel="prev" title="Adventure 0: Ohm’s Law" href="../adv-ohm/adv-ohm.html" />
     <style>
       :root {
         --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
@@ -312,8 +312,8 @@
     </div>
     <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Adventure 0: Ohm’s Law</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../adv-series/adv-series.html">Adventure 1a: Equivalent resistance: Resistors in series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adv-ohm/adv-ohm.html">Adventure 0: Ohm’s Law</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Adventure 1a: Equivalent resistance: Resistors in series</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../adventures.html">Circuit Explorers</a></li>
 </ul>
 
@@ -333,303 +333,243 @@
           <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="../index.html">Start</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Adventure 0: Ohm’s Law</li>
+    <li class="breadcrumb-item active" aria-current="page">Adventure 1a: Equivalent resistance: Resistors in series</li>
   </ol>
 </nav>
-    <section class="tex2jax_ignore mathjax_ignore" id="adventure-0-ohms-law">
-<h1>Adventure 0: Ohm’s Law<a class="headerlink" href="#adventure-0-ohms-law" title="Link to this heading">¶</a></h1>
+    <section class="tex2jax_ignore mathjax_ignore" id="adventure-1a-equivalent-resistance-resistors-in-series">
+<h1>Adventure 1a: Equivalent resistance: Resistors in series<a class="headerlink" href="#adventure-1a-equivalent-resistance-resistors-in-series" title="Link to this heading">¶</a></h1>
 <section id="goal">
 <h2>Goal<a class="headerlink" href="#goal" title="Link to this heading">¶</a></h2>
-<p>Design your first circuit. First, simulate it on your computer. Then, create it
-on a breadboard.</p>
-<p>Understand <strong>Ohm’s law</strong> and experiment with different electrical components.</p>
+<p>Understand <strong>equivalent resistance</strong>.
+Simulate a circuit with multiple resistors, connected <em>in series</em>.
+Then, build it on a breadboard.</p>
 </section>
 <section id="simulate-circuit">
 <h2>Simulate circuit<a class="headerlink" href="#simulate-circuit" title="Link to this heading">¶</a></h2>
-<p>We will use an interactive circuit simulator running inside your browser to
-simulate a simple circuit. It was written by <a class="reference external" href="https://github.com/pfalstad/" rel="noreferer noopener" target="_blank">Paul
-Falstad</a> and enhanced by <a class="reference external" href="https://github.com/sharpie7" rel="noreferer noopener" target="_blank">Iain
-Sharp</a>.</p>
-<p>Watch this <a class="reference external" href="https://www.youtube.com/watch?v=_qOYj3onHAw" rel="noreferer noopener" target="_blank">video tutorial on Circuit
-Simulator</a> as an introduction to
-how it works.</p>
 <ol class="arabic">
-<li><p>Navigate to <a class="reference external" href="https://falstad.com/circuit/circuitjs.html" rel="noreferer noopener" target="_blank">Circuit Simulator</a>.
-Notice the application will open in a new tab in your browser. Drag the tab
-out into its own window, so you can have these instructions and the Circuit
-simulator open side-by-side.</p></li>
-<li><p>To concentrate on your circuits, press F11 to switch fullscreen mode on and
-off.</p></li>
-<li><p>Click <strong>File –&gt; New Blank Circuit</strong> to start with a new blank circuit.</p></li>
-<li><p>Add a voltage source, a resistor, and a ground wire to your circuit. Connect
-them with wires. Here is a screenshot that can help you find the tools you
-will need:</p>
-<p><img alt="Screenshot: Circuit Simulator - Voltage source, ground, resistor, wire" src="../_images/sshot-tools.png" /></p>
-<p>At this point your circuit should look something like this:</p>
-<p><img alt="Screenshot: Circuit Simulator: Ohm's law" src="../_images/sshot-ohm.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Notice the mouse cursor changes when you are ready to draw a new component,
-compared to when you are moving components around. Use the <strong>Esc</strong> key to
-stop drawing components.</p>
-</div>
+<li><p>Open <a class="reference external" href="https://falstad.com/circuit/circuitjs.html" rel="noreferer noopener" target="_blank">Circuit Simulator</a> and
+load the circuit from <a class="reference internal" href="../adv-ohm/adv-ohm.html"><span class="std std-doc">Adventure 0: Ohm’s Law</span></a>.
+Here is an example of the finished circuit: <a class="reference external" href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKADcRD8QAWHvTt2wIUUMT1piqMBCwBOggcNF44IZWLDwWAcxAZIPXv32HexQlJYB3EKqob7xgZBuLnpo3xduDXk07eUCxAA" rel="noreferer noopener" target="_blank">Circuit - Ohm’s
+law</a>.</p></li>
+<li><p>Use your mouse to drag a selection box around your circuit, so you can
+select multiple components. Copy and paste your existing circuit once, so
+you have two independent (sub-)circuits side-by-side, each with its own
+voltage source and connection to ground.</p></li>
+<li><p>In your copy, add a new resistor <em>in series</em> with the old one:</p>
+<ol class="arabic simple">
+<li><p>Insert one more resistor.</p></li>
+<li><p>Connect it so it sits <em>between</em> VCC and the original resistor, <strong>or</strong>
+the original resistor and GND.</p></li>
+<li><p>Double click it and set its resistance to <span class="math notranslate nohighlight">\(4kΩ\)</span>.</p></li>
+</ol>
+<p>Your circuit should look something like this:</p>
+<p><img alt="Screenshot: Circuit Simulator - Resistors inseries" src="../_images/sshot-series.png" /></p>
 </li>
-<li><p>Click the <strong>RUN / Stop</strong> button to start the simulation, and see the current
-flow!</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Make sure Circuit Simulator reports no <strong>bad connection</strong>. Circuit Simulators
-highlights bad connections using <strong>red dots</strong>.</p>
-<p>Here is an example, where I thought the ground was connected to the wire,
-but it was not, it was floating instead. Notice the red dot and how the
-simulator reports <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">bad</span> <span class="pre">connection</span></code>:</p>
-<p><img alt="Screenshot: Circuit Simulator - Bad connection" src="../_images/sshot-badconnection.png" /></p>
-<p>To fix this, and establish a connection to the ground:</p>
-<ol class="arabic simple">
-<li><p>Hover over the single wire and press <code class="docutils literal notranslate"><span class="pre">Del</span></code> to delete it.</p></li>
-<li><p>Add a new wire for the left part of the original wire.</p></li>
-<li><p>Add a new wire for the right part of the original wire.</p></li>
-</ol>
-<p><strong>Alternatively</strong>, you can split the wire at the point where you want to
-connect your ground. This is a more advanced operation:</p>
-<ol class="arabic simple">
-<li><p>Hover your mouse over the wire, so it is selected.</p></li>
-<li><p>Move the mouse cursor close to the red dot, but not <em>on</em> the red dot.</p></li>
-<li><p>Hold down the <strong>Ctrl</strong> key and click, so you split the wire at this
-point, and a new node appears where it connects with ground.</p></li>
-</ol>
+<li><p>Click <strong>RUN / Stop</strong> to start the simulation. Hover your mouse over each
+one of the two resistors, notice the <em>same</em> current flows through both
+of them. What is its value? How does it compare between the old and the new
+circuit?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>It is smaller, <span class="math notranslate nohighlight">\(I_{new} = 1mA\)</span>, while the current that flows through the
+original circuit is <span class="math notranslate nohighlight">\(I_{old} = 5mA\)</span>.</p>
 </div>
 <p>If you would like some help with creating the circuit, see below.</p>
 <div class="dropdown admonition hint">
 <p class="admonition-title">Hint</p>
-<p>Here is an example of the finished circuit: <a class="reference external" href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKADcRD8QAWHvTt2wIUUMT1piqMBCwBOggcNF44IZWLDwWAcxAZIPXv32HexQlJYB3EKqob7xgZBuLnpo3xduDXk07eUCxAA" rel="noreferer noopener" target="_blank">Circuit - Ohm’s law</a>.</p>
+<p>Here is an example of the finished circuit: <a class="reference external" href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKAHcQAWbFL4wiijx8BkdiGzYBnflx4jw4hEK5gBy4TNEsA5nN5b9FMLypiAThKmr1KzmqjI4LAG5XpsydIdmutR2bQCK4UGB7qYTYBftS+MMGWCJH2AoQI3qIgaM56hBgGsnm8CCYB4mGaDhUKYhxJ4SBFCqwcTYbVhhaNeJUCHT4gePAsAA6hAlLCaROEwtjRteNR9RKzUOLTq1PpUWJjs3Nr1ZMSCxs9W9296xzHR2spN1dRm49iAB6NkNL2jSjznEBXHAnBAACVWJ8MGBNNhhDgkICIKCwKCwSgWEA" rel="noreferer noopener" target="_blank">Circuit - Resistors in series</a>.</p>
 </div>
 </li>
-<li><p>Explore: Change your circuit, move things around, delete components and
-re-add them.</p>
+<li><p>Change the value of the second resistor. How does the current change
+depending on the value? What happens if you set the resistance to zero? What
+happens when you set it to a really big value, say <span class="math notranslate nohighlight">\(100MΩ\)</span>?</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<ul class="simple">
-<li><p>If you make a mistake, use Ctrl-Z to undo.</p></li>
-<li><p>Hover your mouse over the different selections in the UI, a tooltip will
-appear.</p></li>
-<li><p>Notice there are useful <em>keyboard shortcuts</em> for all components you need
-to add. For example press <strong>r</strong> to insert a new resistor. Explore to find
-more!</p></li>
-<li><p>Click <strong>Edit –&gt; Center Circuit</strong> to center your circuit. Also find
-commands to zoom in and out of your circuit in the <strong>Edit</strong> menu.</p></li>
-<li><p>If you close your browser window by mistake, use <strong>File –&gt; Recover
-Auto-Save</strong> to bring back your latest work.</p></li>
-</ul>
+<p>Double-click any wire and enable <strong>Show current</strong> so you can see the
+current that flows through the it as you change the resistance.</p>
 </div>
 </li>
-</ol>
-<!-- See https://myst-parser.readthedocs.io/en/latest/syntax/admonitions.html#collapsible-admonitions -->
-<ol class="arabic">
-<li><p>Notice the current flows around your circuit, through the resistor.
-Hover your mouse over the resistor, and notice the values shown inside
-the box on the lower-right corner. Notice the resistance of this component,
-it’s <span class="math notranslate nohighlight">\(R = 1kΩ\)</span>. Notice the value for the <strong>current</strong> flowing through the
-resistor. <span class="math notranslate nohighlight">\(I = 5mA\)</span>. Notice the value for the <strong>voltage drop</strong> around the
-resistor, it’s <span class="math notranslate nohighlight">\(V_d = 5V\)</span>.</p></li>
-<li><p>Double click the voltage source and change its voltage to <code class="docutils literal notranslate"><span class="pre">10</span></code>, i.e., <span class="math notranslate nohighlight">\(10V\)</span>.
-Hover over the resistor again, how much is the current flowing through
-the circuit now?</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p>Notice it is <em>double</em>, <span class="math notranslate nohighlight">\(I = 10mA\)</span>. Double the voltage, double the current.</p>
-</div>
-</li>
-<li><p>What happens to the current if you double the resistance? Double click the
-resistor, set it to <code class="docutils literal notranslate"><span class="pre">2k</span></code>, i.e., <span class="math notranslate nohighlight">\(2kΩ\)</span>.</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p><em>Double</em> the resistance, <em>half</em> the current.</p>
-</div>
-</li>
-<li><p>Notice the current flowing through the circuit depends on the voltage of the
-source and the resistance of the resistor.</p>
+<li><p>Continue changing the value of the second resistor. How does the voltage
+drop across each resistor change depending on the resistance?</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Click <strong>Draw –&gt; Outputs and Labels –&gt; Add Voltmeter/Scope Probe</strong>,
+and add one voltmeter over each resistor. Add wires to each voltmeter so its
+ends connect to the ends of the resistor below it. This way the voltmeter
+will be measuring the voltage drop across each resistor.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p><strong>Ohm’s law</strong> determines how much current flows through a resistor:
-<div class="math notranslate nohighlight">
-\[I = {V \over R}\]</div>
-</p>
-<p>This means that for each resistor we can always find one of <span class="math notranslate nohighlight">\(I\)</span>, <span class="math notranslate nohighlight">\(V\)</span>, or
-<span class="math notranslate nohighlight">\(R\)</span>, if we know the other two:</p>
-<div class="math notranslate nohighlight">
-\[
-I = {V \over R} \qquad R = {V \over I} \qquad V = I \times R
-\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ohm’s law only applies to <em>ideal</em> resistors, which we also call <em>resistive</em>,
-or <em>ohmic</em> loads. We will see there are other types of loads, like diodes,
-and capacitors, later on.</p>
+<p>Double-click each voltmeter and set its “series resistance” to <code class="docutils literal notranslate"><span class="pre">0</span></code>, i.e.,
+infinite. This makes it an <em>ideal</em> voltmeter, which does not have any
+effect on the quantity it measures. We will talk more about this in the
+next adventure.</p>
 </div>
+</div>
+<div class="docutils">
+<p>Your circuit should look something like this:</p>
+<p><img alt="Screenshot: Circuit Simulator - Resistors in series - Voltage" src="../_images/sshot-series-volt.png" /></p>
 </div>
 </li>
-<li><p>Double click the voltage source, make sure it’s set to <span class="math notranslate nohighlight">\(5V\)</span>. What should the
-resistance be to have a current of <span class="math notranslate nohighlight">\(I = 25mA\)</span> flow through the circuit? Use
-Ohm’s law to compute it.</p>
+<li><p>Let’s name the two resistors and set them to <span class="math notranslate nohighlight">\(R_1 = 2kΩ\)</span>, <span class="math notranslate nohighlight">\(R_2 = 4kΩ\)</span>,
+so their voltage drops are <span class="math notranslate nohighlight">\(V_1\)</span>, <span class="math notranslate nohighlight">\(V_2\)</span>, respectively.
+What is the value of <span class="math notranslate nohighlight">\(V_1\)</span>, <span class="math notranslate nohighlight">\(V_2\)</span>, and what is the sum <span class="math notranslate nohighlight">\(V_T = V_1 +
+V_2\)</span>?</p>
+<p>Set the value of <span class="math notranslate nohighlight">\(R_2\)</span> to <span class="math notranslate nohighlight">\(8kΩ\)</span>. What happens to <span class="math notranslate nohighlight">\(V_2\)</span>, <span class="math notranslate nohighlight">\(V_1\)</span>, and
+their sum?</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Answer</p>
-<p>Let’s use Ohm’s law:
+<p><strong>Before:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+R_1 = 2kΩ \qquad V_1 &amp;= 1.667V \\
+R_2 = 4kΩ \qquad V_2 &amp;= 3.333V \\
+                 V_T = V_1 + V_2 &amp;= 5V
+\end{align*}
+\end{split}\]</div>
+<p><strong>After:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+R_1 = 2kΩ \qquad V_1 &amp;= 1V \\
+R_2 = 8kΩ \qquad V_2 &amp;= 4V \\
+                 V_T = V_1 + V_2 &amp;= 5V
+\end{align*}
+\end{split}\]</div>
+<p>So, <span class="math notranslate nohighlight">\(V_2\)</span> increases as <span class="math notranslate nohighlight">\(R_2\)</span> increases but the sum remains the same.</p>
+</div>
+</li>
+<li><p>Set <span class="math notranslate nohighlight">\(R_1 = 2kΩ\)</span>, <span class="math notranslate nohighlight">\(R_2 = 3kΩ\)</span>. Try different values for the single resistor
+in your old circuit so the current that flows through the old circuit
+<strong>matches</strong> the current that flows through the new circuit. How big does the
+single resistor have to be, so it works the same as the two separate
+resistors?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>It needs to be <span class="math notranslate nohighlight">\(R_T = 5kΩ\)</span>.</p>
+</div>
+</li>
+<li><p>Notice how the single resistor has to be equal to the <strong>sum</strong> of the two
+independent resistors connected in series, to have the same effect.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Two resistors <span class="math notranslate nohighlight">\(R_1\)</span>, <span class="math notranslate nohighlight">\(R_2\)</span> connected in series have a <em>total</em> resistance
+which is the sum of their individual values:
+<div class="math notranslate nohighlight">
+\[R_T = R_1 + R_2\]</div>
+</p>
+<p>In this case the <em>same</em> current flows through both resistors:
+<div class="math notranslate nohighlight">
+\[I_S = I_1 = I_2\]</div>
+</p>
+<p>And the total voltage is <em>divided</em> between the two resistors:
+<div class="math notranslate nohighlight">
+\[V_T = V_1 + V_2\]</div>
+</p>
+</div>
+</li>
+<li><p>What current will flow when <span class="math notranslate nohighlight">\(R_1 = 2kΩ\)</span>, <span class="math notranslate nohighlight">\(R_2 = 8kΩ\)</span>?
+Use Ohm’s law for the equivalent circuit to find out.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>We know the equivalent resistance is <span class="math notranslate nohighlight">\(R_T = R_1 + R_2 = 2kΩ + 8kΩ = 10kΩ\)</span>.
+We can use Ohm’s law for the equivalent circuit:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+I &amp;= {V \over R_T} \\
+\\
+I &amp;= {5V \over 10kΩ} \\
+\\
+Ι &amp;= 0.5mA
+\end{align*}
+\end{split}\]</div>
+</div>
+</li>
+<li><p>What will the voltage drop for each resistance be in this case.
+Use Ohm’s law for each one of the resistors.
+What is the ratio <span class="math notranslate nohighlight">\(V_1 / V_2\)</span> in this case?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>We know the same current passes through both resistors, <span class="math notranslate nohighlight">\(I_S = I_1 = I_2 = 0.5mA\)</span>.
+We use Ohm’s law for each resistor individually:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+V_1 &amp;= I_1 \cdot R_1 &amp; \qquad V_2 &amp;= I_2 \cdot R_2 \\
+V_1 &amp;= 0.5mA \cdot 2kΩ &amp; \qquad V_2 &amp;= 0.5mA \cdot 8kΩ \\
+V_1 &amp;= 1V &amp; \qquad V_2 &amp;= 4V
+\end{align*}
+\end{split}\]</div>
+<p>The voltage ratio is:
 <div class="math notranslate nohighlight">
 \[
-R = {V \over I} = {5V \over 25mA} = {5 \over {25 \cdot 10^{-3}}} =
-{5000V \over 25A} = 200Ω
+{V_1 \over V_2} = {1 \over 4}
 \]</div>
 </p>
 </div>
 </li>
-<li><p>Set the resistor’s value to the one you just computed. How much current
-flows through the circuit?</p></li>
-<li><p>Hover over different <strong>wires</strong>. Notice the same current, <span class="math notranslate nohighlight">\(I\)</span> flows through
-every part of the circuit. Notice the voltage drop is zero, <span class="math notranslate nohighlight">\(V_d = 0\)</span>.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Wires are <em>ideal</em> and have zero resistance. Their length does not matter,
-their resistance is always <span class="math notranslate nohighlight">\(R = 0\)</span>, so the voltage drop around them is
-always <span class="math notranslate nohighlight">\(V_d = 0\)</span>.</p>
+<li><p>What is the ratio <span class="math notranslate nohighlight">\(V_1 / V_2\)</span> for resistors <span class="math notranslate nohighlight">\(R_1\)</span>, <span class="math notranslate nohighlight">\(R_2\)</span> connected in
+series?</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>We know Ohm’s law still applies to each resistor individually, and the
+<em>same</em> current flows through both resistors.
+We can combine these two facts to compute the ratio <span class="math notranslate nohighlight">\(V_1 / V_2\)</span>.</p>
+<p>We know that Ohm’s law applies to the two resistors individually:
+<div class="math notranslate nohighlight">
+\[
+I_1 = {V_1 \over R_1} \qquad I_2 = {V_2 \over R_2}
+\]</div>
+</p>
+<p>And we know the same current flows through both resistors, because they
+are connected in series. So:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+I_1 &amp;= I_2 \\
+\\
+{V_1 \over R_1} &amp;= {V_2 \over R_2} \\
+\\
+{V_1 \cdot R_2} &amp;= {V_2 \cdot R_1} \\
+\\
+{V_1 \over V_2} &amp;= {R_1 \over R_2}
+\end{align*}
+\end{split}\]</div>
+<p>So, the voltage ratio is the resistance ratio, for resistors connected in
+series.</p>
 </div>
 </li>
-<li><p>Hover over different <strong>nodes</strong> in the circuit. How much is the voltage at
-the two ends of the resistor?</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p>Notice one end is at <span class="math notranslate nohighlight">\(5V\)</span>, because it is connected to the long end of the
-voltage source – the <em>positive</em> end – and one end is at <span class="math notranslate nohighlight">\(0V\)</span>, because it
-is connected to ground.</p>
-</div>
-</li>
-<li><p>Experiment with different values of <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(R\)</span> for the voltage source and
-resistor, respectively. Confirm Ohm’s law applies.</p></li>
-<li><p><strong>Save</strong> your work: Click <strong>File –&gt; Save As…</strong>, name your file, and click
-<strong>OK</strong> to download it. Later on, use <strong>File –&gt; Open File…</strong> to load
-your saved circuit.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>If you close your browser window without having saved your work, remember
-you can always click <strong>File –&gt; Recover Auto-Save</strong> to return to your
-latest circuit.</p>
-</div>
-</li>
+<li><p><em>Next step:</em> Add a 1MΩ potentiometer.</p></li>
 </ol>
 </section>
 <section id="build-circuit">
 <h2>Build circuit<a class="headerlink" href="#build-circuit" title="Link to this heading">¶</a></h2>
-<p>Grab your breadboard! It’s time to build the actual circuit, and use a
-multimeter to measure voltages and currents:</p>
-<ol class="arabic">
-<li><p>Observe your breadboard. Notice it has holes arranged in columns and rows.
-The holes are all connected in a specific pattern, watch this <a class="reference external" href="https://www.youtube.com/shorts/QKsVPHKTNOw" rel="noreferer noopener" target="_blank">video on how
-breadboard works</a> to understand
-more.</p></li>
-<li><p>Take your multimeter and set it to the 🎵 position. Touch the probes
-together, confirm that the meter beeps. This means there it detects an
-electrical connection between the two probes – very small resistance.</p></li>
-<li><p>Test different pairs of holes using your multimeter. When does it beep, and
-why?</p>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Use the probe wires with crocodile clips at the end and clip them on small
-wires, so you can put them in the holes of the breadboard.</p>
-</div>
-</li>
-<li><p>Set your multimeter to <strong>Ω - 200</strong> or a similar range. This means it can
-measure resistors up to <code class="docutils literal notranslate"><span class="pre">200Ω</span></code>. Take a 150Ω resistor and measure it, what
-value does the multimeter show? Why is it not exactly 150Ω?</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p>No component is ideal in the real world. Resistors are built with
-<em>tolerance</em>. Also, resistance depends on environmental factors, e.g.,
-ambient temperature.</p>
-</div>
-</li>
-<li><p>Take a <strong>DC chassis connector [5.50mm x 2.1mm]</strong>, it should look similar to
-<a class="reference external" href="https://www.fanos.gr/en-gb/connectors/dc-connectors/dc-connector-5-5-x-2-1mm-html" rel="noreferer noopener" target="_blank">this
-one</a>.
-Find out which pins correspond to the round part and the pin of the barrel
-plug. Connect two small wires at each pin, so you can then insert them in
-the breadboard. Insert the wire that corresponds to the pin in the <strong>(+)</strong>
-bar, and the wire that corresponds to the round part in the <strong>(-)</strong> bar. The
-(+) bar will be your “VCC” [supply voltage], the (-) bar will be your GND
-[ground].</p></li>
-<li><p>Take a <strong>USB charger</strong> and connect it to your wall outlet. Take a <strong>USB A
-–&gt; DC 5.50 x 2.10mm cable</strong> – it should look similar to <a class="reference external" href="https://www.skroutz.gr/s/24015538/Powertech-USB-2-0-Cable-USB-A-male-DC-5-5x2-5mm-Mayro-1-5m-CAB-U121.html" rel="noreferer noopener" target="_blank">this
-one</a>
-– and use it to connect the USB charger with the chassis connector on your
-breadboard.</p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p><strong>NEVER</strong> connect anything else to your wall outlet <em>except</em> the USB
-charger. Wall outlets supply <strong>extremely dangerous</strong> voltages, 110V or 220V.</p>
-</div>
-</li>
-<li><p>Set your multimeter to “V - 20V” or a similar range. Measure voltage across
-the breadboard. How much voltage does the USB charger supply to your
-breadboard? Ensure you are measuring around <span class="math notranslate nohighlight">\(5V\)</span>. Note down this value. Why
-is it not exactly <span class="math notranslate nohighlight">\(5.00V\)</span>?</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p>No component is ideal in the real world. Voltage sources do not supply a
-constant voltage, their voltage actually depends on the current that flows
-through the circuit, and other factors.</p>
-</div>
-</li>
-<li><p>The polarity – the sign of the measurement – is important! Make sure to
-place the red lead on (+), the black lead on (-). What happens if you
-reverse them?</p></li>
-<li><p>Build your circuit. Choose a resistor around 150Ω, and connect between the
-VCC and GND bars. Current is now flowing through the resistor! How much
-current do you expect is now flowing? Use Ohm’s law to compute it.</p></li>
-<li><p>Measure this current. Connect your multimeter <em>in series</em> with the resistor,
-that is between VCC and the resistor, or between the resistor and ground.
-Set it to “DC A - 200m” or similar. How much current do you measure?
-How does it compare to your estimate in the previous step?
-What happens if your reverse the probes?</p></li>
-<li><p>Measure the voltage between VCC and GND again. Is it the same as when no
-current was flowing through the circuit? Keep the multimeter connected, and
-connect and disconnect one leg of the resistor, to close and open the
-circuit. What do you notice?</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p>The voltage changes, because the USB charger is a real-world component,
-and not an ideal voltage source. It is slightly lower when current flows
-through the circuit.</p>
-</div>
-</li>
+<p>Grab your breadboard! Start from the original circuit you had built for
+<a class="reference internal" href="../adv-ohm/adv-ohm.html"><span class="std std-doc">Adventure 0: Ohm’s Law</span></a>:</p>
+<ol class="arabic simple">
+<li><p>Take an 80Ω resistor, and measure it using your multimeter. Write down this
+measurement.</p></li>
+<li><p>Add it in series with the original 150Ω resistor.</p></li>
+<li><p>Compute the equivalent resistance of the two resistors.</p></li>
+<li><p>Use your multimeter to measure the input voltage.</p></li>
+<li><p>Compute the current you expect will flow through the circuit, using Ohm’s law
+for the equivalent circuit.</p></li>
+<li><p>Measure the current that flows through this circuit.</p></li>
+<li><p>Compute the voltage drop you expect for each resistor, using Ohm’s law.</p></li>
+<li><p>Measure the voltage drop across each one of the resistors, and compare with
+your computations above.</p></li>
+<li><p><strong>Next step:</strong> Experiment with a 1MΩ trimmer / potentiometer.</p></li>
 </ol>
 </section>
 <section id="celebrate">
 <h2>Celebrate<a class="headerlink" href="#celebrate" title="Link to this heading">¶</a></h2>
-<p>Congratulations! You’ve simulated and built your first circuit.
-Here are more things to explore, as you prepare to embark on your next
-adventure.</p>
-<ul>
-<li><p>What happens if you connect two resistors <em>in series</em>, one after the other?
-That is, you insert one more resistor <em>between</em> one leg of the existing
-resistor, and VCC or GND. Simulate the circuit and build it on your
-breadboard.</p>
-<p>Here is what your circuit should look like:</p>
-<p><img alt="Screenshot: Circuit Simulator: Ohm's law - Resistors in series" src="../_images/sshot-ohm-series.png" /></p>
-</li>
-<li><p>What happens if you connect two resistors <em>in parallel</em>? That is, you insert
-one more resistor which touches exactly the same points as the existing
-resistor. They both connect to VCC and GND at the same time.</p>
-<p>Here is what your circuit should look like:</p>
-<p><img alt="Screenshot: Circuit Simulator: Ohm's law - Resistors in parallel" src="../_images/sshot-ohm-parallel.png" /></p>
-</li>
-</ul>
+<p>Congratulations! You’ve simulated and built circuits with resistors in series.</p>
 <p>Here are more resources to explore:</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
+<div class="{see docutils">
 <ul class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Voltage_source" rel="noreferer noopener" target="_blank">Wikipedia: Voltage source</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ohm%27s_law" rel="noreferer noopener" target="_blank">Wikipedia: Ohm’s law</a></p></li>
-<li><p><a class="reference external" href="https://github.com/pfalstad/circuitjs1" rel="noreferer noopener" target="_blank">GitHub repository for Circuit Simulator</a></p></li>
-<li><p><a class="reference external" href="https://lushprojects.com/circuitjs/" rel="noreferer noopener" target="_blank">Iain Sharp’s page on Circuit Simulator</a></p></li>
+<li><p><a class="reference external" href="https://www.bbc.co.uk/bitesize/guides/z6cvqp3/revision/1" rel="noreferer noopener" target="_blank">BBC Bitesize: Resistors in series</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Series_and_parallel_circuits" rel="noreferer noopener" target="_blank">Wikipedia: Series and parallel circuits</a></p></li>
 </ul>
 </div>
 </section>
@@ -647,7 +587,7 @@ resistor. They both connect to VCC and GND at the same time.</p>
             <div class="collapse nftt-toc-collapse" id="tocContents">
               <nav id="TableOfContents">
                 <ul>
-<li><a class="reference internal" href="#">Adventure 0: Ohm’s Law</a><ul>
+<li><a class="reference internal" href="#">Adventure 1a: Equivalent resistance: Resistors in series</a><ul>
 <li><a class="reference internal" href="#goal">Goal</a></li>
 <li><a class="reference internal" href="#simulate-circuit">Simulate circuit</a></li>
 <li><a class="reference internal" href="#build-circuit">Build circuit</a></li>
@@ -668,19 +608,19 @@ resistor. They both connect to VCC and GND at the same time.</p>
       <nav id="paginator" class="py-4" aria-label="Documentation navigation">
     <div class="container">
       <ul class="pagination justify-content-between mb-0"><li class="d-flex page-item">
-            <a href="../index.html" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: Development">
+            <a href="../adv-ohm/adv-ohm.html" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: Adventure 0: Ohm’s Law">
               <span class="prev-page"><i class="bi bi-caret-left"></i></span>
               <div class="d-none d-sm-flex flex-column">
                 <span class="text-small text-start text-muted">Previous</span>
-                <span class="underline">Development</span>
+                <span class="underline">Adventure 0: Ohm’s Law</span>
               </div>
             </a>
           </li>
         <li class="d-flex page-item ms-auto">
-            <a href="../adv-series/adv-series.html" class="d-flex px-5 align-items-end" rel="next" aria-label="Next page: Adventure 1a: Equivalent resistance: Resistors in series">
+            <a href="../adventures.html" class="d-flex px-5 align-items-end" rel="next" aria-label="Next page: Circuit Explorers">
               <div class="d-flex flex-column">
                 <span class="text-small text-end text-start text-muted">Next</span>
-                <span class="underline">Adventure 1a: Equivalent resistance: Resistors in series</span>
+                <span class="underline">Circuit Explorers</span>
               </div>
               <span class="next-page"><i class="bi bi-caret-right"></i></span>
             </a>
