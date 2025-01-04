@@ -31,9 +31,19 @@ how it works.
    will need:
 
    ![Screenshot: Circuit Simulator - Voltage source, ground, resistor, wire](sshot-tools.png)
-1. Notice the mouse cursor changes when you are ready to draw a new component,
+
+   At this point your circuit should look something like this:
+
+   ![Screenshot: Circuit Simulator: Ohm's law](sshot-ohm.png)
+
+   :::{tip}
+   Notice the mouse cursor changes when you are ready to draw a new component,
    compared to when you are moving components around. Use the **Esc** key to
    stop drawing components.
+   :::
+
+1. Click the **RUN / Stop** button to start the simulation, and see the current
+   flow!
 
    :::{important}
 
@@ -46,21 +56,29 @@ how it works.
 
    ![Screenshot: Circuit Simulator - Bad connection](sshot-badconnection.png)
 
-   To fix this, you need to delete the single wire and add two separate wires
-   instead.
+   To fix this, and establish a connection to the ground:
+   1. Hover over the single wire and press `Del` to delete it.
+   2. Add a new wire for the left part of the original wire.
+   3. Add a new wire for the right part of the original wire.
 
-   Alternatively, you split the wire at the point where you want to connect
-   your ground:
-   1. Hover over the wire, so the wire is selected
-   2. Move the mouse cursor close to the red dot, but not *on* the red do
+
+   **Alternatively**, you can split the wire at the point where you want to
+   connect your ground. This is a more advanced operation:
+   1. Hover your mouse over the wire, so it is selected.
+   2. Move the mouse cursor close to the red dot, but not *on* the red dot.
    3. Hold down the **Ctrl** key and click, so you split the wire at this
       point, and a new node appears where it connects with ground.
    :::
 
-1. Click the **RUN / Stop** button to start the simulation, and see the current
-   flow! At this point your circuit should look something like this:
+   If you would like some help with creating the circuit, see below.
 
-   ![Screenshot: Circuit Simulator: Ohm's law](sshot-ohm.png)
+   :::{hint}
+   :class: dropdown
+   Here is an example of the finished circuit: [Circuit - Ohm's law](https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKADcRD8QAWHvTt2wIUUMT1piqMBCwBOggcNF44IZWLDwWAcxAZIPXv32HexQlJYB3EKqob7xgZBuLnpo3xduDXk07eUCxAA)
+   :::
+
+1. Explore: Change your circuit, move things around, delete components and
+   re-add them.
 
    :::{tip}
    * If you make a mistake, use Ctrl-Z to undo.
@@ -76,13 +94,6 @@ how it works.
    :::
 
 <!-- See https://myst-parser.readthedocs.io/en/latest/syntax/admonitions.html#collapsible-admonitions -->
-
-   If you would like some help with creating the circuit, see below.
-
-   :::{hint}
-   :class: dropdown
-   Here is an example of the finished circuit: [Circuit - Ohm's law](https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKADcRD8QAWHvTt2wIUUMT1piqMBCwBOggcNF44IZWLDwWAcxAZIPXv32HexQlJYB3EKqob7xgZBuLnpo3xduDXk07eUCxAA)
-   :::
 
 1. Notice the current flows around your circuit, through the resistor.
    Hover your mouse over the resistor, and notice the values shown inside
@@ -126,7 +137,7 @@ how it works.
 
    :::{note}
    Ohm's law only applies to *ideal* resistors, which we also call *resistive*,
-   or *ohmic* laws. We will see there are other types of loads, like diodes,
+   or *ohmic* loads. We will see there are other types of loads, like diodes,
    and capacitors, later on.
    :::
 
@@ -174,14 +185,12 @@ how it works.
 ## Build circuit
 
 
-Grab your breadboard! it's time to build the actual circuit, and use a
-multimeter to measure voltages and currents.
+Grab your breadboard! It's time to build the actual circuit, and use a
+multimeter to measure voltages and currents:
 
-Breadboard
-
-1. Notice your breadboard. Notice it has holes arranged in columns and rows.
+1. Observe your breadboard. Notice it has holes arranged in columns and rows.
    The holes are all connected in a specific pattern, watch this [video on how
-   breadboard workis](https://www.youtube.com/shorts/QKsVPHKTNOw) to understand
+   breadboard works](https://www.youtube.com/shorts/QKsVPHKTNOw) to understand
    more.
 
 1. Take your multimeter and set it to the 🎵 position. Touch the probes
@@ -225,8 +234,8 @@ Breadboard
    breadboard.
 
    :::{danger}
-   **NEVER** connect anything else to your wall outlet *except* the USB charger.
-   Wall outlets supply **extremely dangerous** voltages, 110V or 220V.
+   **NEVER** connect anything else to your wall outlet *except* the USB
+   charger. Wall outlets supply **extremely dangerous** voltages, 110V or 220V.
    :::
 
 1. Set your multimeter to "V - 20V" or a similar range. Measure voltage across
