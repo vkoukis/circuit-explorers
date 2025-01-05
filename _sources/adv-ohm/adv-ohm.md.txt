@@ -1,5 +1,6 @@
 # Adventure 0: Ohm's Law
 
+
 ## Goal
 
 Design your first circuit. First, simulate it on your computer. Then, create it
@@ -93,7 +94,7 @@ how it works.
      Auto-Save** to bring back your latest work.
    :::
 
-<!-- See https://myst-parser.readthedocs.io/en/latest/syntax/admonitions.html#collapsible-admonitions -->
+   <!-- See https://myst-parser.readthedocs.io/en/latest/syntax/admonitions.html#collapsible-admonitions -->
 
 1. Notice the current flows around your circuit, through the resistor.
    Hover your mouse over the resistor, and notice the values shown inside
@@ -109,16 +110,21 @@ how it works.
    :::{admonition} Answer
    :class: hint
    :class: dropdown
-   Notice it is *double*, $I = 10mA$. Double the voltage, double the current.
+   Notice it is *double*, $I = 10mA$. Double the voltage, double the current,
+   when resistance remains constant.
    :::
 
-1. What happens to the current if you double the resistance? Double click the
-   resistor, set it to `2k`, i.e., $2kΩ$.
+1. Double click the resistor and double the resistance, set it to $2kΩ$. What
+   happens to the current that flows through the circuit? Compare to its
+   previous value, when the resistance was $1kΩ$, we have now doubled the
+   resistance.
 
    :::{admonition} Answer
    :class: hint
    :class: dropdown
-    *Double* the resistance, *half* the current.
+    Notice the current is *half*. It used to be $10mA$, now it is
+    $I = 5mA$ again. *Double* the resistance, *half* the current, when voltage
+    remains constant.
    :::
 
 1. Notice the current flowing through the circuit depends on the voltage of the
@@ -216,8 +222,9 @@ multimeter to measure voltages and currents:
    :::
 
 1. Set your multimeter to **Ω - 200** or a similar range. This means it can
-   measure resistors up to `200Ω`. Take a 150Ω resistor and measure it, what
-   value does the multimeter show? Why is it not exactly 150Ω?
+   measure resistors up to $200Ω$. Take a $150Ω$ resistor and place the red and
+   black probe at the two ends of the resistor to measure it. What value does
+   the multimeter show? Why is it not exactly $150Ω$?
 
    :::{admonition} Answer
    :class: hint
@@ -245,13 +252,15 @@ multimeter to measure voltages and currents:
 
    :::{danger}
    **NEVER** connect anything else to your wall outlet *except* the USB
-   charger. Wall outlets supply **extremely dangerous** voltages, 110V or 220V.
+   charger. Wall outlets supply **extremely dangerous** voltages, $110V$ or
+   $220V$.
    :::
 
 1. Set your multimeter to "V - 20V" or a similar range. Measure voltage across
-   the breadboard. How much voltage does the USB charger supply to your
-   breadboard? Ensure you are measuring around $5V$. Note down this value. Why
-   is it not exactly $5.00V$?
+   the breadboard. See this example video on how to [measure voltage with a
+   multimeter](https://www.youtube.com/watch?v=glVID_skJFQ). How much voltage
+   does the USB charger supply to your breadboard? Ensure you are measuring
+   around $5V$. Note down this value. Why is it not exactly $5.00V$?
 
    :::{admonition} Answer
    :class: hint
@@ -265,7 +274,7 @@ multimeter to measure voltages and currents:
    place the red lead on (+), the black lead on (-). What happens if you
    reverse them?
 
-1. Build your circuit. Choose a resistor around 150Ω, and connect between the
+1. Build your circuit. Choose a resistor around $150Ω$, and connect between the
    VCC and GND bars. Current is now flowing through the resistor! How much
    current do you expect is now flowing? Use Ohm's law to compute it.
 

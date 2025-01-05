@@ -23,8 +23,8 @@
           <link rel="stylesheet" type="text/css" href="../_static/sphinx-nefertiti-default.min.css?v=5aefbef3" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/fonts/nunito/stylesheet.css?v=0ed606bc" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/fonts/red-hat-mono/stylesheet.css?v=4eee5046" /><!-- add (1) -->
-          <link rel="stylesheet" type="text/css" href="../_static/pygments-dark.css?v=589f9147" /><!-- add (1) -->
-          <link rel="stylesheet" type="text/css" href="../_static/pygments-light.css?v=1620426e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-dark.css?v=2de69186" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-light.css?v=970f37b1" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/bootstrap-icons.min.css?v=44730005" /><!-- add (1) -->
         <link rel="index" title="Index" href="../genindex.html" />
         <link rel="search" title="Search" href="../search.html" />
@@ -314,7 +314,8 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Adventure 0: Ohm’s Law</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../adv-series/adv-series.html">Adventure 1a: Equivalent resistance: Resistors in series</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../adventures.html">Circuit Explorers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adv-parallel/adv-parallel.html">Adventure 1b: Equivalent resistance: Resistors in parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adventures-WIP.html">Adventures (WIP)</a></li>
 </ul>
 
   </nav>
@@ -422,10 +423,8 @@ commands to zoom in and out of your circuit in the <strong>Edit</strong> menu.</
 Auto-Save</strong> to bring back your latest work.</p></li>
 </ul>
 </div>
-</li>
-</ol>
 <!-- See https://myst-parser.readthedocs.io/en/latest/syntax/admonitions.html#collapsible-admonitions -->
-<ol class="arabic">
+</li>
 <li><p>Notice the current flows around your circuit, through the resistor.
 Hover your mouse over the resistor, and notice the values shown inside
 the box on the lower-right corner. Notice the resistance of this component,
@@ -437,14 +436,19 @@ Hover over the resistor again, how much is the current flowing through
 the circuit now?</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Answer</p>
-<p>Notice it is <em>double</em>, <span class="math notranslate nohighlight">\(I = 10mA\)</span>. Double the voltage, double the current.</p>
+<p>Notice it is <em>double</em>, <span class="math notranslate nohighlight">\(I = 10mA\)</span>. Double the voltage, double the current,
+when resistance remains constant.</p>
 </div>
 </li>
-<li><p>What happens to the current if you double the resistance? Double click the
-resistor, set it to <code class="docutils literal notranslate"><span class="pre">2k</span></code>, i.e., <span class="math notranslate nohighlight">\(2kΩ\)</span>.</p>
+<li><p>Double click the resistor and double the resistance, set it to <span class="math notranslate nohighlight">\(2kΩ\)</span>. What
+happens to the current that flows through the circuit? Compare to its
+previous value, when the resistance was <span class="math notranslate nohighlight">\(1kΩ\)</span>, we have now doubled the
+resistance.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Answer</p>
-<p><em>Double</em> the resistance, <em>half</em> the current.</p>
+<p>Notice the current is <em>half</em>. It used to be <span class="math notranslate nohighlight">\(10mA\)</span>, now it is
+<span class="math notranslate nohighlight">\(I = 5mA\)</span> again. <em>Double</em> the resistance, <em>half</em> the current, when voltage
+remains constant.</p>
 </div>
 </li>
 <li><p>Notice the current flowing through the circuit depends on the voltage of the
@@ -538,8 +542,9 @@ wires, so you can put them in the holes of the breadboard.</p>
 </div>
 </li>
 <li><p>Set your multimeter to <strong>Ω - 200</strong> or a similar range. This means it can
-measure resistors up to <code class="docutils literal notranslate"><span class="pre">200Ω</span></code>. Take a 150Ω resistor and measure it, what
-value does the multimeter show? Why is it not exactly 150Ω?</p>
+measure resistors up to <span class="math notranslate nohighlight">\(200Ω\)</span>. Take a <span class="math notranslate nohighlight">\(150Ω\)</span> resistor and place the red and
+black probe at the two ends of the resistor to measure it. What value does
+the multimeter show? Why is it not exactly <span class="math notranslate nohighlight">\(150Ω\)</span>?</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Answer</p>
 <p>No component is ideal in the real world. Resistors are built with
@@ -564,13 +569,15 @@ breadboard.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p><strong>NEVER</strong> connect anything else to your wall outlet <em>except</em> the USB
-charger. Wall outlets supply <strong>extremely dangerous</strong> voltages, 110V or 220V.</p>
+charger. Wall outlets supply <strong>extremely dangerous</strong> voltages, <span class="math notranslate nohighlight">\(110V\)</span> or
+<span class="math notranslate nohighlight">\(220V\)</span>.</p>
 </div>
 </li>
 <li><p>Set your multimeter to “V - 20V” or a similar range. Measure voltage across
-the breadboard. How much voltage does the USB charger supply to your
-breadboard? Ensure you are measuring around <span class="math notranslate nohighlight">\(5V\)</span>. Note down this value. Why
-is it not exactly <span class="math notranslate nohighlight">\(5.00V\)</span>?</p>
+the breadboard. See this example video on how to <a class="reference external" href="https://www.youtube.com/watch?v=glVID_skJFQ" rel="noreferer noopener" target="_blank">measure voltage with a
+multimeter</a>. How much voltage
+does the USB charger supply to your breadboard? Ensure you are measuring
+around <span class="math notranslate nohighlight">\(5V\)</span>. Note down this value. Why is it not exactly <span class="math notranslate nohighlight">\(5.00V\)</span>?</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Answer</p>
 <p>No component is ideal in the real world. Voltage sources do not supply a
@@ -581,7 +588,7 @@ through the circuit, and other factors.</p>
 <li><p>The polarity – the sign of the measurement – is important! Make sure to
 place the red lead on (+), the black lead on (-). What happens if you
 reverse them?</p></li>
-<li><p>Build your circuit. Choose a resistor around 150Ω, and connect between the
+<li><p>Build your circuit. Choose a resistor around <span class="math notranslate nohighlight">\(150Ω\)</span>, and connect between the
 VCC and GND bars. Current is now flowing through the resistor! How much
 current do you expect is now flowing? Use Ohm’s law to compute it.</p></li>
 <li><p>Measure this current. Connect your multimeter <em>in series</em> with the resistor,

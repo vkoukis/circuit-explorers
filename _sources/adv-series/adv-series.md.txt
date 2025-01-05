@@ -64,8 +64,8 @@ Then, build it on a breadboard.
    :::{tip}
    Click **Draw --> Outputs and Labels --> Add Voltmeter/Scope Probe**,
    and add one voltmeter over each resistor. Add wires to each voltmeter so its
-   ends connect to the ends of the resistor below it. This way the voltmeter
-   will be measuring the voltage drop across each resistor.
+   ends connect to the ends of the resistor below it. This way each voltmeter
+   will be measuring the voltage drop across its respective resistor.
 
       :::{important}
       Double-click each voltmeter and set its "series resistance" to `0`, i.e.,
@@ -73,7 +73,6 @@ Then, build it on a breadboard.
       effect on the quantity it measures. We will talk more about this in the
       next adventure.
       :::
-   :::
 
    Your circuit should look something like this:
 
@@ -86,7 +85,7 @@ Then, build it on a breadboard.
    V_2$?
 
    Set the value of $R_2$ to $8kΩ$. What happens to $V_2$, $V_1$, and
-   their sum?
+   their sum, $V_T$?
 
    :::{admonition} Answer
    :class: hint
@@ -118,12 +117,13 @@ Then, build it on a breadboard.
    in your old circuit so the current that flows through the old circuit
    **matches** the current that flows through the new circuit. How big does the
    single resistor have to be, so it works the same as the two separate
-   resistors?
+   resistors connected in series?
 
    :::{admonition} Answer
    :class: hint
    :class: dropdown
    It needs to be $R_T = 5kΩ$.
+   :::
 
 1. Notice how the single resistor has to be equal to the **sum** of the two
    independent resistors connected in series, to have the same effect.
@@ -159,7 +159,7 @@ Then, build it on a breadboard.
    \end{align*}
    $$
 
-1. What will the voltage drop for each resistance be in this case.
+1. What will the voltage drop for each resistance be in this case?
    Use Ohm's law for each one of the resistors.
    What is the ratio $V_1 / V_2$ in this case?
 
@@ -183,8 +183,8 @@ Then, build it on a breadboard.
    $$
    :::
 
-1. What is the ratio $V_1 / V_2$ for resistors $R_1$, $R_2$ connected in
-   series?
+1. In general, what is the ratio $V_1 / V_2$ for resistors $R_1$, $R_2$
+   connected in series?
 
    :::{important}
    We know Ohm's law still applies to each resistor individually, and the
@@ -223,13 +223,13 @@ Then, build it on a breadboard.
 Grab your breadboard! Start from the original circuit you had built for
 [](../adv-ohm/adv-ohm.md):
 
-1. Take an 80Ω resistor, and measure it using your multimeter. Write down this
-   measurement.
-1. Add it in series with the original 150Ω resistor.
+1. Take an $80Ω$ resistor, and measure it using your multimeter. Write down
+   this measurement.
+1. Add it in series with the original $150Ω$ resistor.
 1. Compute the equivalent resistance of the two resistors.
 1. Use your multimeter to measure the input voltage.
-1. Compute the current you expect will flow through the circuit, using Ohm's law
-   for the equivalent circuit.
+1. Compute the current you expect will flow through the circuit, using Ohm's
+   law for the equivalent circuit.
 1. Measure the current that flows through this circuit.
 1. Compute the voltage drop you expect for each resistor, using Ohm's law.
 1. Measure the voltage drop across each one of the resistors, and compare with

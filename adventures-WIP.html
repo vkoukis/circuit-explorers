@@ -13,9 +13,9 @@
     <meta name="docsearch:release" content="" />
     <meta name="docsearch:version" content="" />
     
-      <title>Circuit Explorers &mdash; Circuit Explorers  documentation</title>
+      <title>Adventures (WIP) &mdash; Circuit Explorers  documentation</title>
     
-    <link rel="canonical" href="adventures" />
+    <link rel="canonical" href="adventures-WIP" />
       <link rel="icon" href="_static/logo.png" />
           <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" /><!-- add (1) -->
@@ -23,13 +23,13 @@
           <link rel="stylesheet" type="text/css" href="_static/sphinx-nefertiti-default.min.css?v=5aefbef3" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="_static/fonts/nunito/stylesheet.css?v=0ed606bc" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="_static/fonts/red-hat-mono/stylesheet.css?v=4eee5046" /><!-- add (1) -->
-          <link rel="stylesheet" type="text/css" href="_static/pygments-dark.css?v=589f9147" /><!-- add (1) -->
-          <link rel="stylesheet" type="text/css" href="_static/pygments-light.css?v=1620426e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/pygments-dark.css?v=2de69186" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="_static/pygments-light.css?v=970f37b1" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="_static/bootstrap-icons.min.css?v=44730005" /><!-- add (1) -->
         <link rel="index" title="Index" href="genindex.html" />
         <link rel="search" title="Search" href="search.html" />
         <link rel="top" title="Circuit Explorers  documentation" href="#" />
-        <link rel="prev" title="Adventure 1a: Equivalent resistance: Resistors in series" href="adv-series/adv-series.html" />
+        <link rel="prev" title="Adventure 1b: Equivalent resistance: Resistors in parallel" href="adv-parallel/adv-parallel.html" />
     <style>
       :root {
         --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
@@ -313,7 +313,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="adv-ohm/adv-ohm.html">Adventure 0: Ohm’s Law</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adv-series/adv-series.html">Adventure 1a: Equivalent resistance: Resistors in series</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Circuit Explorers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adv-parallel/adv-parallel.html">Adventure 1b: Equivalent resistance: Resistors in parallel</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Adventures (WIP)</a></li>
 </ul>
 
   </nav>
@@ -332,15 +333,53 @@
           <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="index.html">Start</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Circuit Explorers</li>
+    <li class="breadcrumb-item active" aria-current="page">Adventures (WIP)</li>
   </ol>
 </nav>
-    <section class="tex2jax_ignore mathjax_ignore" id="circuit-explorers">
-<h1>Circuit Explorers<a class="headerlink" href="#circuit-explorers" title="Link to this heading">¶</a></h1>
-<p>A hands-on tutorial on exploring, designing, simulating, building, and testing
-digital circuits.</p>
-<p><em>Goal:</em> Build a full-featured, programmable 8-bit computer using only chips
-in the <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits" rel="noreferer noopener" target="_blank">74LS family of integrated circuits</a>.</p>
+    <section class="tex2jax_ignore mathjax_ignore" id="adventures-wip">
+<h1>Adventures (WIP)<a class="headerlink" href="#adventures-wip" title="Link to this heading">¶</a></h1>
+<section id="adventure-0a-light-an-led">
+<h2>Adventure 0A: Light an LED<a class="headerlink" href="#adventure-0a-light-an-led" title="Link to this heading">¶</a></h2>
+<p>EveryCircuit.
+Simulate circuit. Battery –&gt; LED. How much voltage? Kaboom.</p>
+<p>LED is 2-2.5V.
+Aim for 2.4V. –&gt; 130Ω
+Video: https://www.youtube.com/shorts/CIMbjJQNHa0</p>
+<p>Make sure to place the <em>long</em> leg [anode, (+)] to the side of VCC.</p>
+<p>Multimeter: Place inline, measure current [20.4mA].
+What do you expect the voltage drop to be around the resistor? [U = IR = 2.9988V]
+Measure voltage drop across resistor [3.02V].
+Measure voltage drop across diode [2.09V]
+What is their sum, why? It is ~5V, exactly the voltage of our source, because U = U1 + U2.</p>
+<p>Does it make a difference if the resistor is between VCC and (+) or between (-) and GND? No, because the current is exactly the same.</p>
+<p>Use a momentary switch inline with the LED. Use the multimeter to find out what each pin does, set it to “Ω - 🎵” mode.</p>
+<p>Replace with a small switch (SPDT) inline with the LED. Switch it on and off at will.
+The switch is a <em>double throw</em> switch. Design a circuit which allows you to choose one of the two LEDs to light. Pay attention to the <em>polarity</em> of the LEDs.</p>
+<section id="adventure-0b-light-an-led-design-and-simulate-circuit">
+<h3>Adventure 0B: Light an LED: Design and simulate circuit<a class="headerlink" href="#adventure-0b-light-an-led-design-and-simulate-circuit" title="Link to this heading">¶</a></h3>
+<p>Navigate to https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html
+Click <strong>Download for Windows 10 64-bit and forward</strong> [or any other option, depending on the Operating System on your computer]
+Double-click file <code class="docutils literal notranslate"><span class="pre">LTspice64.msi</span></code>, follow the instructions to install LTspice
+Launch LTspice. It may prompt you to update your library files, accept and allow it to download the latest versions.</p>
+<ol class="arabic simple">
+<li><p>Download QSPice: https://getqspice.com/InstallQSPICE.exe</p></li>
+<li><p>“Install as User”</p></li>
+<li><p>Allow the installer to download QSPICE</p></li>
+</ol>
+</section>
+<section id="adventure-0c-light-an-led-build-physical-circuit">
+<h3>Adventure 0C: Light an LED: Build physical circuit<a class="headerlink" href="#adventure-0c-light-an-led-build-physical-circuit" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<section id="adventure-0a-light-two-leds">
+<h2>Adventure 0A: Light two LEDs<a class="headerlink" href="#adventure-0a-light-two-leds" title="Link to this heading">¶</a></h2>
+<section id="adventure-0b-light-two-leds-design-and-simulate-circuit">
+<h3>Adventure 0B: Light two LEDs: Design and simulate circuit<a class="headerlink" href="#adventure-0b-light-two-leds-design-and-simulate-circuit" title="Link to this heading">¶</a></h3>
+</section>
+<section id="adventure-0c-light-two-leds-build-physical-circuit">
+<h3>Adventure 0C: Light two LEDs: Build physical circuit<a class="headerlink" href="#adventure-0c-light-two-leds-build-physical-circuit" title="Link to this heading">¶</a></h3>
+</section>
+</section>
 <section id="adventure-0-install-digital-run-tutorial">
 <h2>Adventure 0: Install Digital, run tutorial<a class="headerlink" href="#adventure-0-install-digital-run-tutorial" title="Link to this heading">¶</a></h2>
 <p><em>Goal:</em> Install <a class="reference external" href="https://github.com/hneemann/Digital" rel="noreferer noopener" target="_blank">Digital</a>.
@@ -411,6 +450,21 @@ table for each one of your outputs automatically.</p></li>
 <h3>Adventure 1B: Logic gates: Simulate with 74LS chips<a class="headerlink" href="#adventure-1b-logic-gates-simulate-with-74ls-chips" title="Link to this heading">¶</a></h3>
 <p><em>Goal:</em> Build a circuit similar to the one in Adventure 1A, but use 74xx chips
 in Digital.</p>
+<p>Place the 7404 in the middle of your breadboard.
+You may have to bend some pins slightly, experiment, don’t worry if you break things.
+Connect the VCC pin to the VCC bar, and the GND pin to the GND bar.
+Connect to the power supply and ensure the the chip gets 5V across its VCC and GND pins.
+Bridge all pins you will not be using [3A, 4A, 5A, 6A] to GND with small wires.
+Connect a pushbutton [a “momentary switch”], so that one of the side pins to
+VCC, the other to GND, so that the middle pin stays LOW when you do nothing,
+and turns to HIGH when you push the button. Use your multimeter to verify.
+Switch the jumper wires until you make it happen.
+Connect the <em>middle</em> pin of the momentary switch to the 1A input of the 7404.
+Use your multimeter to measure all voltages. If they are not 0V and ~5V [i.e., a clear LOW, or HIGH] make sure you’ve seated all of your jumper wires properly, one connection make be flaky. Do not move on until you’ve confirmed this, a clear signal at the input pin of the 74LS04.</p>
+<p>OUTPUT: Measure the voltage at the output pin of the 74LS04 when you do nothing [4.57V] and when you push the button [0.14V]. What is happening?
+The 74LS04 is an <em>inverter</em>, i.e., it implements a NOT gate.</p>
+<p>Connect an LED: VCC -&gt; resistor –&gt; anode of the LED –&gt; cathode of the LED –&gt; 1Y.
+Voltage: 4.58V. Button pushed, voltage: 0.51V</p>
 <ol class="arabic">
 <li><p>Have a look at the list of logic gates in the 74LS family
 (<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits#Logic_gates" rel="noreferer noopener" target="_blank">Wikipedia</a>)
@@ -434,14 +488,13 @@ as well as pins to connect to power [VCC] and to the ground [GND].</p></li>
 this time using 74xx chips instead of the basic LED gates. For each chip
 implementing 2-input gates, wire input <code class="docutils literal notranslate"><span class="pre">A</span></code> to input <code class="docutils literal notranslate"><span class="pre">1A</span></code> of each chip, and
 input <code class="docutils literal notranslate"><span class="pre">B</span></code> to input <code class="docutils literal notranslate"><span class="pre">1B</span></code> of each chip. Notice chip 7404 implements NOT gates
-which only accept one input, and the pin layout differs slightly between
-different chips, so you need to be paying attention.</p></li>
+which only accept one input. Also note the pin layout differs slightly
+between different chips, so you need to be paying attention.</p></li>
 <li><p>Insert an LED output per gate you have used, 8 total. Label them according
 to their role, as in Adventure 1A. Wire the output of each logic gate you
 have used to the right LED. When adding wires, pay attention to not touch
-other
-pins on the chip. It is OK if the wires go over the chip itself, but they
-should not touch other pins, because you will find it difficult to wire
+other pins on the chip. It is OK if the wires go over the chip itself, but
+they should not touch other pins, because you will find it difficult to wire
 these pins later on.</p></li>
 <li><p>Navigate to Components –&gt; Wires –&gt; Supply voltage and add a power source
 next to each chip. Label it <code class="docutils literal notranslate"><span class="pre">VCC</span></code>. Connect the VCC pin of each chip to VCC.</p></li>
@@ -523,7 +576,7 @@ these tools throughout the tutorial:</p>
 <tr class="row-even"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>5V power supply</p></td>
 <td class="text-left"><p>E.g., any USB charger</p></td>
-<td class="text-left"><p></p></td>
+<td class="text-left"><p>Buy a breakout plug, so we can connect</p></td>
 </tr>
 <tr class="row-odd"><td class="text-left"><p>1</p></td>
 <td class="text-left"><p>breadboard</p></td>
@@ -575,15 +628,35 @@ these tools throughout the tutorial:</p>
 <td class="text-left"><p>Single Pole Double Throw Switch</p></td>
 <td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/en-gb/switches/slide-switch/slide-switch-on-on-spdt-12d01.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>3</p></td>
+<tr class="row-odd"><td class="text-left"><p>10</p></td>
 <td class="text-left"><p>LED, red</p></td>
 <td class="text-left"><p>LED, red 2-2.5V, 20mA</p></td>
 <td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CF%80%CE%B7%CE%B3%CE%AD%CF%82-%CF%86%CF%89%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D/led/10mm/led-10mm-%CE%BA%CF%8C%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%85-%CF%87%CF%81%CF%8E%CE%BC%CE%B1%CF%84%CE%BF%CF%82-l813id-40-150mcd-html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>3</p></td>
-<td class="text-left"><p>120-150Ω resistors</p></td>
-<td class="text-left"><p>Resistors, 1W</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BE%CE%B1%CF%81%CF%84%CE%B7%CE%BC%CE%B1%CF%84%CE%B1/%CE%91%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AC%CF%83%CE%B5%CE%B9%CF%82,%20antistaseis,%20%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7,%20antistasi/%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7-1W/%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CE%B1%CF%83%CE%B7-120-%CF%89-1w.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
+<tr class="row-even"><td class="text-left"><p>2</p></td>
+<td class="text-left"><p>1kΩ resistors</p></td>
+<td class="text-left"><p>Resistors, ½W</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.fanos.gr/%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BE%CE%B1%CF%81%CF%84%CE%B7%CE%BC%CE%B1%CF%84%CE%B1/%CE%91%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AC%CF%83%CE%B5%CE%B9%CF%82,%20antistaseis,%20%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7,%20antistasi/%CE%B1%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%B1%CF%83%CE%B7-1_4W/%CE%B1%CE%BD%CF%84%CE%AF%CF%83%CF%84%CE%B1%CF%83%CE%B7-1-%CE%BA-1-4w.html" rel="noreferer noopener" target="_blank">Fanos</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>2</p></td>
+<td class="text-left"><p>150Ω resistors</p></td>
+<td class="text-left"><p>Resistors, ½W</p></td>
+<td class="text-left"><p><a class="reference internal" href="#FIXME"><span class="xref myst">Fanos</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>2</p></td>
+<td class="text-left"><p>300Ω resistors</p></td>
+<td class="text-left"><p>Resistors, ½W</p></td>
+<td class="text-left"><p><a class="reference internal" href="#FIXME"><span class="xref myst">Fanos</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>2</p></td>
+<td class="text-left"><p>500Ω resistors</p></td>
+<td class="text-left"><p>Resistors, ½W</p></td>
+<td class="text-left"><p><a class="reference internal" href="#FIXME"><span class="xref myst">Fanos</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>1</p></td>
+<td class="text-left"><p>0.1μF capacitor</p></td>
+<td class="text-left"><p>Ceramic capacitor</p></td>
+<td class="text-left"><p><a class="reference internal" href="#FIXME"><span class="xref myst">Fanos</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -593,14 +666,28 @@ See:
 https://www.eevblog.com/forum/beginners/driving-leds-with-74ls-logic/</p>
 <blockquote>
 <div><p>TTL is better at sinking current, so run the LEd’s from the 5V rail with the logic low turning them on. Use 5mA as a current and most modern LED devices will be very bright at this current. Typically this means a 470R resistor per LED.
-A typical 74LS00 output pin can sink significant current to drive a standard LED. Just wire the cathode to the output pin through a suitably sized series resistor (calc for maybe 10 ma, plenty bright) to then to +5vcc. You just have design for circuit so that a LOW  output is the active (lite) state.</p>
+A typical 74LS00 output pin can sink significant current to drive a standard LED. Just wire the cathode to the output pin through a suitably sized series resistor (calc for maybe 10 ma, plenty bright) to then to +5vcc. You just have design for circuit so that a LOW  output is the active (lite) state.
+On the other hand, people have been doing it, but it’s not guaranteed to work if you also want to drive the <em>input</em> of a different 74LS chip:
+https://forum.allaboutcircuits.com/threads/74ls-outputs-drivind-leds.133593/
+So, the conclusion is, it’s best to use an actual buffer/inverter. I can use 74LS04 [inverter] or 74LS07 [high-voltage open-collector buffer].</p>
+</div></blockquote>
+<p><strong>TODO:</strong> Use a pull-up resistor for HIGH inputs. Do not use a pull-down resistor at all, just connect inputs to GND.
+See: https://www.edaboard.com/threads/using-sinlge-pull-down-resistor-for-inputs-to-mutiple-gates-ito-74ls-ics.360131/post-1542109</p>
+<blockquote>
+<div><p>Example on 74LS00 (TI datasheet):
+Given: 5V supply, V_IH =2V, V_IL=0.8V, I_IH=20uA, I_IL =-0.4mA.
+Pulldown to ensure valid low level: R = V / I = V_IL / I_IL = 0.8V / 0.4mA = 2000Ohms. or less. –&gt; use 1K (down to 0R)
+Pullup to ensure valid high level: R = (5V - V_IH) / I_IH = (5V - 2V) / 20uA = 3V/20uA = 150k. or less. –&gt; Use 10k (down to 0R)
+Standardize on a 1k pull-up resistor.</p>
 </div></blockquote>
 <p><strong>WIP:</strong></p>
 <!-- IDEAS FOR NEXT ADVENTURES
 
 ## Adventure: Control an LED with a pushbutton / switch: https://www.sparkfun.com/tutorials/219, https://www.youtube.com/watch?v=zhaX7Im2gTw&list=PLsAJMThMEUtpbjd5ulXTbUwijF1nJkjd_
 
-## Adventure: 4-bit 7-seg display controller [combinatorial, then 74LS chips]
+## Adventure: Implement all gates via NAND, so we can standardize on 74LS00
+
+## Adventure: 4-bit 7-segment display controller [combinatorial, then 74LS chips]
 
 ## Adventure: Full 4-bit adder [combinatorial, then 74LS chips]
 
@@ -622,6 +709,10 @@ A typical 74LS00 output pin can sink significant current to drive a standard LED
 
 ## Adventure: 555-based clock
 
+## Adventure: Ripple counter?
+
+## Adventure: Use register as counter
+
 ## Adventure: Digital die with LEDs
 
 ## Adventure: Create an 8-bit register
@@ -629,7 +720,6 @@ A typical 74LS00 output pin can sink significant current to drive a standard LED
 ## Adventure: 32KB memory?
 
 ## Adventure: connect via USB [USB-to-TTL FTDI / PL2303, e.g., https://www.fanos.gr/en-gb/circuit-boards-arduino/circuit-boards/ft232rl-ftdi-usb-to-ttl-serial-module.html or https://www.hellasdigital.gr/electronics/prototyping/adapters/usb-to-ttl-4-pin-wire/
-
 -->
 </section>
 </section>
@@ -647,7 +737,17 @@ A typical 74LS00 output pin can sink significant current to drive a standard LED
             <div class="collapse nftt-toc-collapse" id="tocContents">
               <nav id="TableOfContents">
                 <ul>
-<li><a class="reference internal" href="#">Circuit Explorers</a><ul>
+<li><a class="reference internal" href="#">Adventures (WIP)</a><ul>
+<li><a class="reference internal" href="#adventure-0a-light-an-led">Adventure 0A: Light an LED</a><ul>
+<li><a class="reference internal" href="#adventure-0b-light-an-led-design-and-simulate-circuit">Adventure 0B: Light an LED: Design and simulate circuit</a></li>
+<li><a class="reference internal" href="#adventure-0c-light-an-led-build-physical-circuit">Adventure 0C: Light an LED: Build physical circuit</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#adventure-0a-light-two-leds">Adventure 0A: Light two LEDs</a><ul>
+<li><a class="reference internal" href="#adventure-0b-light-two-leds-design-and-simulate-circuit">Adventure 0B: Light two LEDs: Design and simulate circuit</a></li>
+<li><a class="reference internal" href="#adventure-0c-light-two-leds-build-physical-circuit">Adventure 0C: Light two LEDs: Build physical circuit</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#adventure-0-install-digital-run-tutorial">Adventure 0: Install Digital, run tutorial</a></li>
 <li><a class="reference internal" href="#adventure-1-logic-gates-not-and-or-xor-nand-nor-xnor">Adventure 1: Logic gates [NOT, AND, OR, XOR, NAND, NOR, XNOR]</a><ul>
 <li><a class="reference internal" href="#adventure-1a-logic-gates-design-and-simulate-circuit">Adventure 1A: Logic gates: Design and simulate circuit</a></li>
@@ -671,11 +771,11 @@ A typical 74LS00 output pin can sink significant current to drive a standard LED
       <nav id="paginator" class="py-4" aria-label="Documentation navigation">
     <div class="container">
       <ul class="pagination justify-content-between mb-0"><li class="d-flex page-item">
-            <a href="adv-series/adv-series.html" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: Adventure 1a: Equivalent resistance: Resistors in series">
+            <a href="adv-parallel/adv-parallel.html" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: Adventure 1b: Equivalent resistance: Resistors in parallel">
               <span class="prev-page"><i class="bi bi-caret-left"></i></span>
               <div class="d-none d-sm-flex flex-column">
                 <span class="text-small text-start text-muted">Previous</span>
-                <span class="underline">Adventure 1a: Equivalent resistance: Resistors in series</span>
+                <span class="underline">Adventure 1b: Equivalent resistance: Resistors in parallel</span>
               </div>
             </a>
           </li>

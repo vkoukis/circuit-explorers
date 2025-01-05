@@ -65,7 +65,8 @@ Looking forward hearing from you!
 
    adv-ohm/adv-ohm.md
    adv-series/adv-series.md
-   adventures.md
+   adv-parallel/adv-parallel.md
+   adventures-WIP.md
 
 ..
    Indices and tables
