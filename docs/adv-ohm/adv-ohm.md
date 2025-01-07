@@ -219,12 +219,16 @@ multimeter to measure voltages and currents:
    :::{hint}
    Use the probe wires with crocodile clips at the end and clip them on small
    wires, so you can put them in the holes of the breadboard.
+   Here is an example video by Science Buddies on [how to use crocodile
+   clips](https://www.youtube.com/shorts/_-MgadRc83I) with your multimeter.
    :::
 
 1. Set your multimeter to **Ω - 200** or a similar range. This means it can
    measure resistors up to $200Ω$. Take a $150Ω$ resistor and place the red and
-   black probe at the two ends of the resistor to measure it. What value does
-   the multimeter show? Why is it not exactly $150Ω$?
+   black probe at the two ends of the resistor to measure it. Watch this example
+   video by Science Buddies on how to [measure resistance with a
+   multimeter](https://www.youtube.com/shorts/LwmtPzRk9yY). What value does the
+   multimeter show? Why is it not exactly $150Ω$?
 
    :::{admonition} Answer
    :class: hint
@@ -257,10 +261,10 @@ multimeter to measure voltages and currents:
    :::
 
 1. Set your multimeter to "V - 20V" or a similar range. Measure voltage across
-   the breadboard. See this example video on how to [measure voltage with a
-   multimeter](https://www.youtube.com/watch?v=glVID_skJFQ). How much voltage
-   does the USB charger supply to your breadboard? Ensure you are measuring
-   around $5V$. Note down this value. Why is it not exactly $5.00V$?
+   the breadboard. Watch this example video by Science Buddies on how to [measure
+   voltage with a multimeter](https://www.youtube.com/watch?v=glVID_skJFQ). How
+   much voltage does the USB charger supply to your breadboard? Ensure you are
+   measuring around $5V$. Note down this value. Why is it not exactly $5.00V$?
 
    :::{admonition} Answer
    :class: hint
@@ -280,9 +284,21 @@ multimeter to measure voltages and currents:
 
 1. Measure this current. Connect your multimeter *in series* with the resistor,
    that is between VCC and the resistor, or between the resistor and ground.
-   Set it to "DC A - 200m" or similar. How much current do you measure?
-   How does it compare to your estimate in the previous step?
+   Set it to "DC A - 200m" or similar. Watch this example video by Science
+   Buddies on how to [measure current with a
+   multimeter](https://www.youtube.com/shorts/fvofeRNyHCA). How much current do
+   you measure? How does it compare to your estimate in the previous step?
    What happens if your reverse the probes?
+
+   :::{caution}
+   Make sure to *always* connect the multimeter **in series** with a resistor,
+   never directly to a voltage source, to **limit the current** that will flow
+   through it. Otherwise, you risk blowing the internal fuse of the multimeter.
+   Your multimeter has an internal fuse which will blow if the current exceeds
+   $500mA$.
+   Watch this video by Science Buddies explaining [how to replace the
+   fuse](https://youtu.be/xIjMYB_qNOI) of your multimeter for more information.
+   :::
 
 1. Measure the voltage between VCC and GND again. Is it the same as when no
    current was flowing through the circuit? Keep the multimeter connected, and
@@ -329,4 +345,6 @@ Here are more resources to explore:
 
 * [GitHub repository for Circuit Simulator](https://github.com/pfalstad/circuitjs1)
 * [Iain Sharp's page on Circuit Simulator](https://lushprojects.com/circuitjs/)
+
+* [Science Buddies: How to Use a Multimeter](https://www.youtube.com/watch?v=ts0EVc9vXcs)
 :::
