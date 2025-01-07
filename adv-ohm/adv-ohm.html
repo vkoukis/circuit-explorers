@@ -20,7 +20,7 @@
           <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" /><!-- add (1) -->
-          <link rel="stylesheet" type="text/css" href="../_static/sphinx-nefertiti-default.min.css?v=5aefbef3" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/sphinx-nefertiti-default.min.css?v=0f5ffd77" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/fonts/nunito/stylesheet.css?v=0ed606bc" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/fonts/red-hat-mono/stylesheet.css?v=4eee5046" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/pygments-dark.css?v=2de69186" /><!-- add (1) -->
@@ -239,7 +239,7 @@
 </li>
 
 <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
-  <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white"></div>
+  <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
   <hr class="d-lg-none text-white-50">
 </li>
               
@@ -315,6 +315,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Adventure 0: Ohm’s Law</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../adv-series/adv-series.html">Adventure 1a: Equivalent resistance: Resistors in series</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../adv-parallel/adv-parallel.html">Adventure 1b: Equivalent resistance: Resistors in parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adv-led/adv-led.html">Adventure 2a: Light an LED</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../adventures-WIP.html">Adventures (WIP)</a></li>
 </ul>
 
@@ -538,13 +539,17 @@ why?</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>Use the probe wires with crocodile clips at the end and clip them on small
-wires, so you can put them in the holes of the breadboard.</p>
+wires, so you can put them in the holes of the breadboard.
+Here is an example video by Science Buddies on <a class="reference external" href="https://www.youtube.com/shorts/_-MgadRc83I" rel="noreferer noopener" target="_blank">how to use crocodile
+clips</a> with your multimeter.</p>
 </div>
 </li>
 <li><p>Set your multimeter to <strong>Ω - 200</strong> or a similar range. This means it can
 measure resistors up to <span class="math notranslate nohighlight">\(200Ω\)</span>. Take a <span class="math notranslate nohighlight">\(150Ω\)</span> resistor and place the red and
-black probe at the two ends of the resistor to measure it. What value does
-the multimeter show? Why is it not exactly <span class="math notranslate nohighlight">\(150Ω\)</span>?</p>
+black probe at the two ends of the resistor to measure it. Watch this example
+video by Science Buddies on how to <a class="reference external" href="https://www.youtube.com/shorts/LwmtPzRk9yY" rel="noreferer noopener" target="_blank">measure resistance with a
+multimeter</a>. What value does the
+multimeter show? Why is it not exactly <span class="math notranslate nohighlight">\(150Ω\)</span>?</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Answer</p>
 <p>No component is ideal in the real world. Resistors are built with
@@ -574,10 +579,10 @@ charger. Wall outlets supply <strong>extremely dangerous</strong> voltages, <spa
 </div>
 </li>
 <li><p>Set your multimeter to “V - 20V” or a similar range. Measure voltage across
-the breadboard. See this example video on how to <a class="reference external" href="https://www.youtube.com/watch?v=glVID_skJFQ" rel="noreferer noopener" target="_blank">measure voltage with a
-multimeter</a>. How much voltage
-does the USB charger supply to your breadboard? Ensure you are measuring
-around <span class="math notranslate nohighlight">\(5V\)</span>. Note down this value. Why is it not exactly <span class="math notranslate nohighlight">\(5.00V\)</span>?</p>
+the breadboard. Watch this example video by Science Buddies on how to <a class="reference external" href="https://www.youtube.com/watch?v=glVID_skJFQ" rel="noreferer noopener" target="_blank">measure
+voltage with a multimeter</a>. How
+much voltage does the USB charger supply to your breadboard? Ensure you are
+measuring around <span class="math notranslate nohighlight">\(5V\)</span>. Note down this value. Why is it not exactly <span class="math notranslate nohighlight">\(5.00V\)</span>?</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Answer</p>
 <p>No component is ideal in the real world. Voltage sources do not supply a
@@ -593,9 +598,22 @@ VCC and GND bars. Current is now flowing through the resistor! How much
 current do you expect is now flowing? Use Ohm’s law to compute it.</p></li>
 <li><p>Measure this current. Connect your multimeter <em>in series</em> with the resistor,
 that is between VCC and the resistor, or between the resistor and ground.
-Set it to “DC A - 200m” or similar. How much current do you measure?
-How does it compare to your estimate in the previous step?
-What happens if your reverse the probes?</p></li>
+Set it to “DC A - 200m” or similar. Watch this example video by Science
+Buddies on how to <a class="reference external" href="https://www.youtube.com/shorts/fvofeRNyHCA" rel="noreferer noopener" target="_blank">measure current with a
+multimeter</a>. How much current do
+you measure? How does it compare to your estimate in the previous step?
+What happens if your reverse the probes?</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure to <em>always</em> connect the multimeter <strong>in series</strong> with a resistor,
+never directly to a voltage source, to <strong>limit the current</strong> that will flow
+through it. Otherwise, you risk blowing the internal fuse of the multimeter.
+Your multimeter has an internal fuse which will blow if the current exceeds
+<span class="math notranslate nohighlight">\(500mA\)</span>.
+Watch this video by Science Buddies explaining <a class="reference external" href="https://youtu.be/xIjMYB_qNOI" rel="noreferer noopener" target="_blank">how to replace the
+fuse</a> of your multimeter for more information.</p>
+</div>
+</li>
 <li><p>Measure the voltage between VCC and GND again. Is it the same as when no
 current was flowing through the circuit? Keep the multimeter connected, and
 connect and disconnect one leg of the resistor, to close and open the
@@ -637,6 +655,7 @@ resistor. They both connect to VCC and GND at the same time.</p>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ohm%27s_law" rel="noreferer noopener" target="_blank">Wikipedia: Ohm’s law</a></p></li>
 <li><p><a class="reference external" href="https://github.com/pfalstad/circuitjs1" rel="noreferer noopener" target="_blank">GitHub repository for Circuit Simulator</a></p></li>
 <li><p><a class="reference external" href="https://lushprojects.com/circuitjs/" rel="noreferer noopener" target="_blank">Iain Sharp’s page on Circuit Simulator</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=ts0EVc9vXcs" rel="noreferer noopener" target="_blank">Science Buddies: How to Use a Multimeter</a></p></li>
 </ul>
 </div>
 </section>
@@ -713,7 +732,7 @@ resistor. They both connect to VCC and GND at the same time.</p>
         
         
         <div class="built-with pt-2">
-          Built with <a href="http://sphinx-doc.org">Sphinx 8.1.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.7.3</a>
+          Built with <a href="http://sphinx-doc.org">Sphinx 8.1.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.7.4</a>
         </div>
         
       </div>
@@ -733,7 +752,7 @@ resistor. They both connect to VCC and GND at the same time.</p>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/colorsets.js?v=93c30d22"></script>
     <script src="../_static/docs-versions.js?v=08b0cbfb"></script>
-    <script src="../_static/sphinx-nefertiti.min.js?v=dfd9d24d"></script>
+    <script src="../_static/sphinx-nefertiti.min.js?v=de1d41e1"></script>
     <script src="../_static/bootstrap.bundle.min.js?v=ff4e7878"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>

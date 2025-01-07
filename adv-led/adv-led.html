@@ -13,9 +13,9 @@
     <meta name="docsearch:release" content="" />
     <meta name="docsearch:version" content="" />
     
-      <title>Adventure 1b: Equivalent resistance: Resistors in parallel &mdash; Circuit Explorers  documentation</title>
+      <title>Adventure 2a: Light an LED &mdash; Circuit Explorers  documentation</title>
     
-    <link rel="canonical" href="adv-parallel/adv-parallel" />
+    <link rel="canonical" href="adv-led/adv-led" />
       <link rel="icon" href="../_static/logo.png" />
           <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
           <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" /><!-- add (1) -->
@@ -29,8 +29,8 @@
         <link rel="index" title="Index" href="../genindex.html" />
         <link rel="search" title="Search" href="../search.html" />
         <link rel="top" title="Circuit Explorers  documentation" href="#" />
-        <link rel="next" title="Adventure 2a: Light an LED" href="../adv-led/adv-led.html" />
-        <link rel="prev" title="Adventure 1a: Equivalent resistance: Resistors in series" href="../adv-series/adv-series.html" />
+        <link rel="next" title="Adventures (WIP)" href="../adventures-WIP.html" />
+        <link rel="prev" title="Adventure 1b: Equivalent resistance: Resistors in parallel" href="../adv-parallel/adv-parallel.html" />
     <style>
       :root {
         --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
@@ -314,8 +314,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../adv-ohm/adv-ohm.html">Adventure 0: Ohm’s Law</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../adv-series/adv-series.html">Adventure 1a: Equivalent resistance: Resistors in series</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Adventure 1b: Equivalent resistance: Resistors in parallel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../adv-led/adv-led.html">Adventure 2a: Light an LED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adv-parallel/adv-parallel.html">Adventure 1b: Equivalent resistance: Resistors in parallel</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Adventure 2a: Light an LED</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../adventures-WIP.html">Adventures (WIP)</a></li>
 </ul>
 
@@ -335,270 +335,156 @@
           <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="../index.html">Start</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Adventure 1b: Equivalent resistance: Resistors in parallel</li>
+    <li class="breadcrumb-item active" aria-current="page">Adventure 2a: Light an LED</li>
   </ol>
 </nav>
-    <section class="tex2jax_ignore mathjax_ignore" id="adventure-1b-equivalent-resistance-resistors-in-parallel">
-<h1>Adventure 1b: Equivalent resistance: Resistors in parallel<a class="headerlink" href="#adventure-1b-equivalent-resistance-resistors-in-parallel" title="Link to this heading">¶</a></h1>
+    <section class="tex2jax_ignore mathjax_ignore" id="adventure-2a-light-an-led">
+<h1>Adventure 2a: Light an LED<a class="headerlink" href="#adventure-2a-light-an-led" title="Link to this heading">¶</a></h1>
 <section id="goal">
 <h2>Goal<a class="headerlink" href="#goal" title="Link to this heading">¶</a></h2>
-<p>Understand <strong>equivalent resistance</strong>.
-Simulate a circuit with multiple resistors, connected <em>in parallel</em>.
-Then, build it on a breadboard.</p>
+<p>Understand <strong>how Light-Emitting Diodes (LEDs)</strong> work.
+Simulate a circuit where we use a voltage source to light an LED. Then, build
+it on a breadboard, to light the LED.</p>
 </section>
 <section id="simulate-circuit">
 <h2>Simulate circuit<a class="headerlink" href="#simulate-circuit" title="Link to this heading">¶</a></h2>
 <ol class="arabic">
+<li><p>Watch this short <a class="reference external" href="https://www.youtube.com/shorts/CIMbjJQNHa0" rel="noreferer noopener" target="_blank">video on how LEDs
+work</a>.</p></li>
+<li><p>Note your LEDs specify a <strong>voltage range</strong>, e.g., <span class="math notranslate nohighlight">\(2.0V - 2.5V\)</span>, and a
+current specification, e.g., <span class="math notranslate nohighlight">\(20mA\)</span>. This means the LED requires the voltage
+across its terminals to be within <span class="math notranslate nohighlight">\(2.0V - 2.5V\)</span>, and the current flowing
+through it will be <span class="math notranslate nohighlight">\(20mA\)</span> when the voltage is at this range.</p></li>
+<li><p>How much voltage does our voltage source supply? Why can’t we just connect
+the LED directly to our voltage source?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Our voltage source supplies about <span class="math notranslate nohighlight">\(5V\)</span>. The LED requires <span class="math notranslate nohighlight">\(2.0V - 2.5V\)</span>
+so we cannot connect it to the voltage source directly. Doing so would
+destroy the LED.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Never connect the LED directly to a voltage source outside its voltage
+range. Watch this video by Ben Eater where he demonstrates how <a class="reference external" href="https://www.youtube.com/watch?v=poWJTSV4Yio&amp;amp;list=PLowKtXNTBypETld5oX1ZMI-LYoA2LWi8D" rel="noreferer noopener" target="_blank">too much
+voltage destroys the
+LED</a>.</p>
+</div>
+</li>
+<li><p>Remember how connecting multiple resistors in series in
+<a class="reference internal" href="../adv-series/adv-series.html"><span class="std std-doc">Adventure 1a: Equivalent resistance: Resistors in series</span></a> <strong>reduces the current</strong> that flows through
+the circuit. Also note connecting multiple resistors in series <strong>divides the
+input voltage</strong> between them. How can we limit the voltage across the LED
+and the amount of current that flows through the LED?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>We will connect a resistor <em>in series</em> with the LED, to limit the voltage
+across its terminals.</p>
+</div>
+</li>
 <li><p>Open <a class="reference external" href="https://falstad.com/circuit/circuitjs.html" rel="noreferer noopener" target="_blank">Circuit Simulator</a> and
-load the circuit from <a class="reference internal" href="../adv-series/adv-series.html"><span class="std std-doc">Adventure 1a: Equivalent resistance: Resistors in series</span></a>.
-Here is an example of the finished circuit: <a class="reference external" href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKAHcQAWbFL4wiijx8BkdiGzYBnflx4jw4hEK5gBy4TNEsA5nN5b9FMLypiAThKmr1KzmqjI4LAG5XpsydIdmutR2bQCK4UGB7qYTYBftS+MMGWCJH2AoQI3qIgaM56hBgGsnm8CCYB4mGaDhUKYhxJ4SBFCqwcTYbVhhaNeJUCHT4gePAsAA6hAlLCaROEwtjRteNR9RKzUOLTq1PpUWJjs3Nr1ZMSCxs9W9296xzHR2spN1dRm49iAB6NkNL2jSjznEBXHAnBAACVWJ8MGBNNhhDgkICIKCwKCwSgWEA" rel="noreferer noopener" target="_blank">Circuit - Resistors in series</a>.</p></li>
-<li><p>Use your mouse to drag a selection box around one the simplest subcircuit,
-so you can select multiple components. Copy and paste the simplest
-subcircuit once, so you have three independent subcircuits side-by-side,
-each with its own voltage source and connection to ground.</p></li>
-<li><p>In the copy, add a new resistor <em>in parallel</em> with the old one:</p>
-<ol class="arabic">
-<li><p>Insert one more resistor, above the existing one.</p></li>
-<li><p>Add wires to connect its two ends to the two ends of the existing
-resistor. This means the new resistor <em>shares</em> its two ends with the
-existing resistor, and it is connected between VCC and GND. We call
-these two resistors connected <em>in parallel</em>.</p></li>
-<li><p>Set the resistance of one resistor to <span class="math notranslate nohighlight">\(5kΩ\)</span> and the resistance
-of the other resistor to <span class="math notranslate nohighlight">\(1.25kΩ = 1250Ω\)</span>.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>At this point Circuit Simulator may show the resistance as <code class="docutils literal notranslate"><span class="pre">1.3kΩ</span></code>,
-although you have set it at <code class="docutils literal notranslate"><span class="pre">1.25kΩ</span></code>. This happens because it uses a
-single decimal digit to display resistance values by default, so it
-rounds <code class="docutils literal notranslate"><span class="pre">1.25kΩ</span></code> to <code class="docutils literal notranslate"><span class="pre">1.3kΩ</span></code> for display purposes. Click
-<strong>Options –&gt; Other Options…</strong> and set <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">of</span> <span class="pre">Decimal</span> <span class="pre">Digits</span> <span class="pre">(short</span> <span class="pre">format)</span></code> to <code class="docutils literal notranslate"><span class="pre">2</span></code>:</p>
-<p><img alt="Screenshot: Circuit Simulator - Other options - Decimal Digits" src="../_images/sshot-options-digits.png" /></p>
+load the circuit from <a class="reference internal" href="../adv-ohm/adv-ohm.html"><span class="std std-doc">Adventure 0: Ohm’s Law</span></a>.
+Here is an example of the finished circuit: <a class="reference external" href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKADcRD8QAWHvTt2wIUUMT1piqMBCwBOggcNF44IZWLDwWAcxAZIPXv32HexQlJYB3EKqob7xgZBuLnpo3xduDXk07eUCxAA" rel="noreferer noopener" target="_blank">Circuit - Ohm’s
+law</a>.</p></li>
+<li><p>Click <strong>Draw –&gt; Outputs and Labels –&gt; Add LED</strong> to add a new LED to
+your circuit. Here is a screenshot to help you find the menu entry, also
+note you can use keyboard shortcut <code class="docutils literal notranslate"><span class="pre">l</span></code>:
+<img alt="Screenshot: Circuit Simulator - LED - Menu entry" src="../_images/sshot-led-menu.png" /></p>
+<p>Add the LED <strong>in series</strong> with the existing resistor in your circuit.
+Note the LED has specific <strong>polarity</strong>. One terminal is the positive
+terminal, or <strong>anode (+)</strong>, one terminal is the negative terminal, or
+<strong>cathode (-)</strong>. The LED is a <strong>diode</strong>, so it allows current to flow in a
+single direction, from the anode to the cathode. The symbol for a diode
+look like an arrow pointing in the direction of current flow:
+<img alt="Wikipedia: Diode symbol" src="https://en.wikipedia.org/wiki/Diode#/media/File:Diode_symbol.svg" /></p>
+<p>After adding the LED, your circuit should look like this:
+<img alt="Screenshot: Circuit Simulator - LED" src="../_images/sshot-led.png" /></p>
+</li>
+<li><p>Double click the LED and edit it to specify the right value for <strong>Max
+Brightness Current</strong> according to your own LEDs, for example <span class="math notranslate nohighlight">\(20mA\)</span>.
+Then, click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">Simple</span> <span class="pre">Model</span></code> and change <strong>Forward Voltage</strong> to
+match the maximum voltage of your LED, for example <span class="math notranslate nohighlight">\(2.5V\)</span>.</p>
+<p><img alt="Screenshot: Circuit Simulator - LED - Current" src="../_images/sshot-led-current.png" /></p>
+</li>
+<li><p>Ensure the resistor is <span class="math notranslate nohighlight">\(1kΩ\)</span>. Hover your mouse over the LED. How much
+current flows through it, how much is the voltage drop around it? Is the
+current and voltage inside the right range for your LED? Does it produce a
+bright light?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>The current is lower than it should, <span class="math notranslate nohighlight">\(3.1mA\)</span> and the voltage is outside the
+right range, at <span class="math notranslate nohighlight">\(1.88V\)</span>. The LED only produces a dim light.</p>
 </div>
 </li>
-</ol>
-<p>Your circuit should look something like this:</p>
-<p><img alt="Screenshot: Circuit Simulator - Resistors inparallel" src="../_images/sshot-parallel.png" /></p>
+<li><p>Edit the resistor and play with different resistance values. What happens
+to the current that flows through the circuit depending on the resistance?
+What resistor should you use for your LED?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Increasing the resistance decreases the current even more. Decreasing the
+resistance increases the current and the voltage across the LED. A good
+value seems is <span class="math notranslate nohighlight">\(150Ω\)</span>. In this case, the current is <span class="math notranslate nohighlight">\(19.5mA\)</span> and the voltage
+across the LED is <span class="math notranslate nohighlight">\(2.07V\)</span>, both within range. So, we can use a <span class="math notranslate nohighlight">\(150Ω\)</span>
+resistor.</p>
 <p>If you would like some help with creating the circuit, see below.</p>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Here is an example of the finished circuit: <a class="reference external" href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3AWAnC1b0DZwwExxwOwEDMkAHDhigSAKyR10O0CmAtGGAFADuICxHPyRZaOMsKyReIYsSzIFgyeBliJCMKPErpAc37LFhobTBCG0gE6z5-LXR2ap2OFwButhSK-2XDBGYoYJhaDzoCb1FIvxD+IMsoaDCbWhjnEAxaBQcGPDcDDAIhYyLTcxCZSI0Hat01dJ8ylW4+ZuM642tMshqsTtyQMnguAAcIrHkJLMmMCWI46T40nOjZiSXM7Nk5rdWoMZ753bqp2UWZOePp3tjN05PdjM2r2Jm7rgAPTMgFTUycAsEMD+OAECAAErcb4EMAaYgSEi0fj-cFgcEQnDhMgOYw4-aJQKMRKhLg2JAVDJgOB9YL5fQgCklHxMugVSwyankWJcjQ+Tb4lSs4ytRmUny8+rkipnSVnZgjPiCs6C56cmk7CSStXEAgMZW7VlnBYc3X63EOYUOE0Hb5IMSyJAMERIR1AsGQ6GMh3AiAulHgtEYrFAA" rel="noreferer noopener" target="_blank">Circuit - Resistors in parallel</a>.</p>
+<div class="hint docutils">
+<dl class="myst field-list simple">
+<dt class="field-odd">class<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dropdown
+Here is an example of the finished circuit: <a class="reference external" href="https://falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKADcRD8QAWHvTt2wIUUMT1piqMBCwBOggcNEZIPEMrFhKLAOYhV6vgMO9ihKSwDuIPHA0jb941GuLe-A2o8DIb0y52VC5+2OoAZlYAJnIA9gAOADoAjijQSBDE0NgojMzi0GB4PMSQCGCQYDwIGMSOVKxghCpoDqJBbSCikTEJKWkZUlCwKP6tmqaafkA" rel="noreferer noopener" target="_blank">Circuit - Light an LED</a>.</p>
+</dd>
+</dl>
+</div>
 </div>
 </li>
-<li><p>Click <strong>RUN / Stop</strong> to start the simulation. Hover your mouse over each
-one of the two resistors. Notice the voltage drop is <em>the same</em> for both
-resistors, because they have the exact same ends, or <em>terminals</em>.
-How much is it?</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p>It is exactly the same as the voltage of the source, <span class="math notranslate nohighlight">\(V = 5V\)</span>, because
-the terminals of both resistors coincide with the terminals of the voltage
-source.</p>
-<p>The reason the terminals of the resistors coincide with the terminals
-of the voltage source is that the wires that connect them are <em>ideal</em>.
-They have zero resistance and their length does not matter, we can ignore
-them.</p>
-</div>
-</li>
-<li><p>Let’s call <span class="math notranslate nohighlight">\(R_1\)</span> the <span class="math notranslate nohighlight">\(5kΩ\)</span> resistor, and <span class="math notranslate nohighlight">\(R_2\)</span> the <span class="math notranslate nohighlight">\(1.25kΩ\)</span> resistor.
-Hover your mouse over the resistors and notice the current that flows
-through each resistor, <span class="math notranslate nohighlight">\(I_1\)</span> and <span class="math notranslate nohighlight">\(I_2\)</span> respectively. What are the two
-values, why are they different?</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p>We notice that <span class="math notranslate nohighlight">\(I_1 = 1mA\)</span> and <span class="math notranslate nohighlight">\(I_2 = 4mA\)</span>. We expected this because
-the two resistors have the same voltage applied at their terminals,
-<span class="math notranslate nohighlight">\(V = 5V\)</span>, but have different resistance.</p>
-</div>
-</li>
-<li><p>How much is the current that flows through the voltage source?
-Let’s call it <span class="math notranslate nohighlight">\(I_T\)</span>.</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p>The current that flows through the voltage source is <span class="math notranslate nohighlight">\(I_T = 5mA\)</span>.</p>
-</div>
-</li>
-<li><p>Change the value of <span class="math notranslate nohighlight">\(R_2\)</span> to random values in the range of <span class="math notranslate nohighlight">\(1kΩ - 10kΩ\)</span>.
-Notice the values of <span class="math notranslate nohighlight">\(I_1\)</span> and <span class="math notranslate nohighlight">\(I_2\)</span> as you do that.</p>
+<li><p>We found the right resistor to use by trying different resistance values.
+Can we <strong>calculate</strong> the right resistance? We know the operating parameters
+of the LED: voltage must be <span class="math notranslate nohighlight">\(2.0 - 2.5V\)</span>, in which case the current is
+<span class="math notranslate nohighlight">\(20mA\)</span>. Can you calculate the right resistance using <strong>Ohm’s law</strong>?</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Click <strong>Draw –&gt; Outputs and Labels –&gt; Add Ammeter</strong>,
-and add one ammeter (“ampere meter”) in series with each resistor, two
-meters in total. This way each ammeter will be measuring the current
-flowing inside the branch of the circuit it is part of, one for <span class="math notranslate nohighlight">\(R_1\)</span>,
-and one for <span class="math notranslate nohighlight">\(R_2\)</span>.</p>
-<p>Your circuit should look something like this:</p>
-<p><img alt="Screenshot: Circuit Simulator - Resistors in parallel - Current" src="../_images/sshot-parallel-amp.png" /></p>
+<p>An LED itself does not follow Ohm’s law. It is not a resistor, we cannot
+use Ohm’s law on it. But we can use Ohm’s low on the resistor we connect
+in series with it, to limit its current. We know the current, and we know
+how much we want the voltage across the LED to be. In
+<a class="reference internal" href="../adv-series/adv-series.html"><span class="std std-doc">Adventure 1a: Equivalent resistance: Resistors in series</span></a> we saw that connecting two resistors in
+series divides the input voltage between them. This holds for all kinds
+of components: the voltage across the resistor and the voltage across the
+LED add up to the input voltage.</p>
 </div>
-</li>
-<li><p>Did you notice any changes in <span class="math notranslate nohighlight">\(I_1\)</span> in the previous step? Why?
-Did you notice any changes in <span class="math notranslate nohighlight">\(I_2\)</span> in the previous step?Why?
-What are the values of <span class="math notranslate nohighlight">\(I_1\)</span>, <span class="math notranslate nohighlight">\(I_2\)</span> for <span class="math notranslate nohighlight">\(R_2 = 2kΩ\)</span>?</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p>Current <span class="math notranslate nohighlight">\(I_1\)</span> remains constant, no matter how we change <span class="math notranslate nohighlight">\(R_2\)</span>.
-We expect this because it only depends on the voltage applied to <span class="math notranslate nohighlight">\(R_1\)</span>
-and the value of <span class="math notranslate nohighlight">\(R_1\)</span> via Ohm’s Law. Both of these quantities remain
-constant, no matter how we change <span class="math notranslate nohighlight">\(R_2\)</span>. So:</p>
+<div class="{admonition docutils">
+<dl class="myst field-list simple">
+<dt class="field-odd">class<span class="colon">:</span></dt>
+<dd class="field-odd"><p>hint</p>
+</dd>
+<dt class="field-even">class<span class="colon">:</span></dt>
+<dd class="field-even"><p>dropdown
+In <a class="reference internal" href="../adv-series/adv-series.html"><span class="std std-doc">Adventure 1a: Equivalent resistance: Resistors in series</span></a> we saw that connecting two resistors
+in series divides the voltage between them. Let’s call <span class="math notranslate nohighlight">\(V_R\)</span> the voltage
+across the resistor, <span class="math notranslate nohighlight">\(V_L\)</span> the voltage across the LED, and <span class="math notranslate nohighlight">\(V_T\)</span> the
+total voltage:
 <div class="math notranslate nohighlight">
-\[
-I_1  = {V \over R_1} = {5V \over 5kΩ} = {5V \over {5 \cdot 10^3}Ω}
-     = {{5 \cdot 10^{-3}V} \over 5Ω} = 1mA
-\]</div>
-<!-- This may be useful in the future as a nicely aligned example:
-$$
-\begin{align*}
-I_1 &= {V \over R_2} =\\
-\\
-    &= {5V \over 5kΩ} =\\
-\\
-    &= {5V \over {5 \cdot 10^3}Ω} =\\
-\\
-    &= {{5 \cdot 10^{-3}V} \over 5Ω} =\\
-\\
-    &= 1mA
-\end{align*}
-$$
--->
-<p>On the other hand, <span class="math notranslate nohighlight">\(I_2\)</span> changes whenever we change <span class="math notranslate nohighlight">\(R_2\)</span>, and it also
-follows Ohm’s law. When <span class="math notranslate nohighlight">\(R_2 = 2kΩ\)</span> we notice <span class="math notranslate nohighlight">\(I_2 = 2.5mA\)</span>, and this is
-what we expect because:</p>
-<div class="math notranslate nohighlight">
-\[
-I_2  = {V \over R_2} = {5V \over 2kΩ} = {5V \over {2 \cdot 10^3}Ω}
-     = {{5 \cdot 10^{-3}V} \over 2Ω} = 2.5mA
-\]</div>
-</div>
-</li>
-<li><p>Let’s focus on <span class="math notranslate nohighlight">\(I_T\)</span>, the current flows through the voltage source. Notice
-how it changes when you change the value of <span class="math notranslate nohighlight">\(R_2\)</span>. Hover over the circuit
-and notice its value when <span class="math notranslate nohighlight">\(R_2 = 2kΩ\)</span>. How does it relate to <span class="math notranslate nohighlight">\(I_1\)</span> and
-<span class="math notranslate nohighlight">\(I_2\)</span>?</p>
-<p>Notice how the current that flows through the voltage source has two
-different paths to follow when it reaches the positive terminal of the two
-resistors. Some of it flows through <span class="math notranslate nohighlight">\(R_1\)</span> and becomes <span class="math notranslate nohighlight">\(I_1\)</span>, some of
-it flows through <span class="math notranslate nohighlight">\(R_2\)</span>, and becomes <span class="math notranslate nohighlight">\(I_2\)</span>. What is the relationship between
-<span class="math notranslate nohighlight">\(I_T\)</span>, <span class="math notranslate nohighlight">\(I_1\)</span>, and <span class="math notranslate nohighlight">\(I_T2\)</span>?</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p>When <span class="math notranslate nohighlight">\(R_2 = 2kΩ\)</span>, we notice that <span class="math notranslate nohighlight">\(I_T = 3.5mA\)</span>.
-We notice <span class="math notranslate nohighlight">\(I_T\)</span> is the <em>sum</em> of <span class="math notranslate nohighlight">\(I_1 = 1mA\)</span> and <span class="math notranslate nohighlight">\(I_2 = 2.5mA\)</span>, since it
-splits into <span class="math notranslate nohighlight">\(I_1\)</span> and <span class="math notranslate nohighlight">\(I_2\)</span> at the positive terminal of the two resistors.</p>
-</div>
-</li>
-<li><p>Similarly, notice how current <span class="math notranslate nohighlight">\(I_1\)</span> and <span class="math notranslate nohighlight">\(I_2\)</span> converge into the negative
-terminal of the resistors, and become <span class="math notranslate nohighlight">\(I_T\)</span>, the current that flows through
-the voltage source.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>This is Kirchhoff’s first law, or Kirchhoff’s <em>current law</em>:</p>
-<blockquote>
-<div><p>“The current flowing into a node (or a junction) must be equal to the
-current flowing out of it.”</p>
-</div></blockquote>
-<p>In our case this means that:
-<div class="math notranslate nohighlight">
-\[
-I_T = I_1 + I2
-\]</div>
+\[ V_T = V_R + V_L \]</div>
 </p>
-<p>and by applying Ohm’s law for each resistor independently, we get:
+</dd>
+</dl>
+<p>We know we want the voltage on the LED to be between <span class="math notranslate nohighlight">\(2.0V - 2.5V\)</span>, so let’s
+choose <span class="math notranslate nohighlight">\(V_L = 2.0V\)</span> to be on the safe side. We also know <span class="math notranslate nohighlight">\(V_T = 5V\)</span>, because
+this is our power supply. In this case the voltage across the resistor will
+be:
 <div class="math notranslate nohighlight">
-\[
-I_T = {V \over R_1} + {V \over R_2}
-\]</div>
+\[ V_R = V_T - V_L = 5V - 2V = 3V \]</div>
 </p>
-</div>
-</li>
-<li><p>Let’s focus on the simplest subcircuit, the one that has a single resistor
-connected to the voltage source. Try setting different values for its
-resistance until the current that flows through <strong>matches</strong> <span class="math notranslate nohighlight">\(I_T = 3.5mA\)</span>.
-How big does the single resistor have to be, so it works the same as the
-two separate resistors connected in parallel? This value will be the
-<strong>equivalent</strong> resistance for the two resistors connected in parallel.</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Answer</p>
-<p>It needs to be <span class="math notranslate nohighlight">\(R_T ~= 1.43kΩ\)</span>.</p>
-</div>
-</li>
-<li><p>Can we derive a generic way to determine <span class="math notranslate nohighlight">\(R_T\)</span> for the two resistors <span class="math notranslate nohighlight">\(R_1\)</span>
-and <span class="math notranslate nohighlight">\(R_2\)</span> connected in parallel?</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Yes, we can start from Kirchhoff’s first law, see above, and apply Ohm’s
-law first for the equivalent circuit and then for each resistor
-independently.</p>
-<p>From Kirchhoff’s first law we know that:
+<p>To calculate the resistance we need, we also need to know the <strong>current</strong>
+we want to flow through the resistor. We know the current flowing through
+the LED should be <strong>20mA</strong>, and our components are connected in series,
+so the current flowing through the resistor is <span class="math notranslate nohighlight">\(I_R = 20mA\)</span>.</p>
+<p>We can know use Ohm’s law to compute the resistance:
 <div class="math notranslate nohighlight">
-\[ I_T = I_1 + I_2 \]</div>
-</p>
-<p>From Ohm’s law for the equivalent circuit we know that:
-<div class="math notranslate nohighlight">
-\[ I_T = {V_T \over R_T} \]</div>
-</p>
-<p>From Ohm’s law for each resistor we know that:
-<div class="math notranslate nohighlight">
-\[ I_1 = {V_1 \over R_1} \qquad I_2 = {V_2 \over R_2} \]</div>
-</p>
-<p>We combine all four equations to get:
-<div class="math notranslate nohighlight">
-\[ {V_T \over R_T} = {V_1 \over R_1} + {V_2 \over R_2} \]</div>
-</p>
-<p>But we know the resistors are connected in parallel, so:
-<div class="math notranslate nohighlight">
-\[ V_T = V_1 = V_2 \]</div>
-</p>
-<p>And finally we get:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
-{V_T \over R_T} &amp;= {V \over R_1} + {V \over R_2} \\
-\\
-{ 1 \over R_T } &amp;= {1 \over R_1} + {1 \over R_2} \\
-\\
-{ 1 \over R_T } &amp;= {R_2 \over {R_1 \cdot R_2}} + {R_1 \over {R_2 \cdot R_1}} \\
-\\
-{ 1 \over R_T } &amp;= {{R_2 + R_1} \over {R_1 \cdot R_2}} \\
-\\
-R_T &amp;= {{R_1 \cdot R_2} \over {R_1 + R_2}}
-\end{align*}
-\end{split}\]</div>
-</div>
-<p>For our specific example where <span class="math notranslate nohighlight">\(R_1 = 5kΩ\)</span>, <span class="math notranslate nohighlight">\(R_2 = 2kΩ\)</span> we get:
-<div class="math notranslate nohighlight">
-\[
-R_T = {{5kΩ \cdot 2kΩ} \over {5kΩ + 2kΩ}}
-    = {{10kΩ \cdot \cancel{kΩ}} \over {7\cancel{kΩ}}} ~= 1429Ω
-\]</div>
-</p>
-</li>
-<li><p>What is the ratio <span class="math notranslate nohighlight">\(I_1 / I_2\)</span> for resistors <span class="math notranslate nohighlight">\(R_1\)</span>, <span class="math notranslate nohighlight">\(R_2\)</span> connected in
-parallel?</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>We know Ohm’s law still applies to each resistor individually, and the
-voltage drop is <em>the same</em> across both resistors.</p>
-<p>We can combine these two facts to compute the ratio <span class="math notranslate nohighlight">\(I_1 / I_2\)</span>.</p>
-<p>We know that Ohm’s law applies to the two resistors individually:
-<div class="math notranslate nohighlight">
-\[
-V_1 = {I_1 \cdot R_1} \qquad V_2 = {I_2 \cdot R_2}
-\]</div>
-</p>
-<p>And we know the voltage drop is the same across both resistors, because they
-are connected in parallel. So:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
-V_1 &amp;= V_2 \\
-\\
-{I_1 \cdot R_1} &amp;= {I_2 \cdot R_2} \\
-\\
-{I_1 \over I_2} &amp;= {R_2 \over R_1}
-\end{align*}
-\end{split}\]</div>
-<p>So, the current ratio is the inverse of the resistance ratio:
-If one resistor has double the resistance of the other, its current will be
-half.</p>
+\[ R = {V_R \over I_R} = {3V \over 20mA} = {3V \over {20 \cdot 10^{-3}mA}}
+= {3000V \over 20A} = 150Ω\]</div>
+.</p>
+<p>This agrees with the results of our simulation, so let’s build it!</p>
 </div>
 </li>
 </ol>
@@ -607,30 +493,84 @@ half.</p>
 <h2>Build circuit<a class="headerlink" href="#build-circuit" title="Link to this heading">¶</a></h2>
 <p>Grab your breadboard! Start from the original circuit you had built for
 <a class="reference internal" href="../adv-ohm/adv-ohm.html"><span class="std std-doc">Adventure 0: Ohm’s Law</span></a>:</p>
-<ol class="arabic simple">
-<li><p>Take an <span class="math notranslate nohighlight">\(80Ω\)</span> resistor, and measure it using your multimeter. Write down
-this measurement.</p></li>
-<li><p>Add it in parallel with the original <span class="math notranslate nohighlight">\(150Ω\)</span> resistor.</p></li>
-<li><p>Compute the equivalent resistance of the two resistors.</p></li>
-<li><p>Use your multimeter to measure the input voltage.</p></li>
-<li><p>Compute the current you expect will flow through the circuit, using Ohm’s
-law for the equivalent circuit.</p></li>
-<li><p>Measure the current that flows through this circuit.</p></li>
-<li><p>Compute the current you expect for each resistor, using Ohm’s law.</p></li>
-<li><p>Measure the current flowing through each one of the resistors, and compare
-with your computations above.</p></li>
+<ol class="arabic">
+<li><p>Make sure your circuit is powered off, disconnect the DC power cable from
+the round DC power plug.</p></li>
+<li><p>Use an <span class="math notranslate nohighlight">\(150Ω\)</span> resistor in series with the LED.</p></li>
+<li><p>Add your LED <strong>in series</strong> with the resistor. Note the long leg is the
+<strong>anode, (+)</strong>, so place it towards VCC, and the short leg is the <strong>cathode,
+(-)</strong>, so place it towards GND.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Do not connect the LED directly to VCC and GND, you <strong>have</strong> to include a
+current-limiting resistor in between, to protect the LED.</p>
+</div>
+</li>
+<li><p>Confirm everything looks good, then power on your circuit, your LED should
+shine bright! If it doesn’t, power off your circuit immediately, and go over
+your circuit again, to ensure everything looks good.</p></li>
+<li><p>Connect your multimeter in series and measure the current flowing around
+the circuit, <span class="math notranslate nohighlight">\(I\)</span>. Write down this current. It should be close to the
+expected value. Example measurement: <span class="math notranslate nohighlight">\(I = 20.4mA\)</span>.</p></li>
+<li><p>How much do you expect the voltage drop around the resistor to be?
+Use your multimeter to measure it. Write down your measurement, and compare
+it with what you expected.</p>
+<div class="admonition-answer admonition">
+<p class="admonition-title">Answer</p>
+<p>We expect the voltage drop to be <span class="math notranslate nohighlight">\(V = IR \approx 3V\)</span>, based on Ohm’s law
+and our chosen resistance. Example measurement: <span class="math notranslate nohighlight">\(3.02V\)</span>. This is very close
+to our expected value.</p>
+</div>
+</li>
+<li><p>Measure the supply voltage. How much do you expect the voltage drop across
+the LED to be?</p>
+<div class="admonition-answer admonition">
+<p class="admonition-title">Answer</p>
+<p>It should be the difference between the supply voltage and the
+voltage measured drop across the resistor, for example <span class="math notranslate nohighlight">\(5.11V - 3.02V\)</span> =
+<span class="math notranslate nohighlight">\(2.09V\)</span>, which is in the right range for our LED.</p>
+</div>
+</li>
+<li><p>Does it make a difference if the resistor sits between VCC and the anode
+of the LED, or if it sits between the cathode of the LED and GND?</p>
+<div class="admonition-answer admonition">
+<p class="admonition-title">Answer</p>
+<p>No, because the current flowing through the LED and its voltage is the
+same.</p>
+</div>
+</li>
+<li><p>Add a momentary switch (push button) in series with the LED. Use the
+multimeter to find out what each pin does, set it to “Ω - 🎵” mode.
+Push the button to turn on the LED at will.</p></li>
+<li><p>Replace the momentary switch a small “Single Pole - Double Throw” (SPDT)
+switch, in series with the LED. Use the multimeter to find out what each
+pin does, set it to “Ω - 🎵” mode. Flip the switch to turn the LED on and
+off at will.</p></li>
 </ol>
 </section>
 <section id="celebrate">
 <h2>Celebrate<a class="headerlink" href="#celebrate" title="Link to this heading">¶</a></h2>
-<p>Congratulations! You’ve simulated and built circuits with resistors in
-parallel.</p>
+<p>Congratulations! You’ve simulated and built a circuit to light an LED, using
+a resistor to limit the current that flows through it.</p>
+<p>Here are more challenges to explore, as you prepare to embark on your next
+adventure.</p>
+<ul>
+<li><p>The switch is a <em>double throw</em> switch. Design, simulate, and build a circuit
+with two LEDs: One of the two LEDs should always be on, and you can choose
+which one of the two LEDs to light based on the position of the switch.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Pay attention to the <em>polarity</em> of the LEDs.</p>
+</div>
+</li>
+</ul>
 <p>Here are more resources to explore:</p>
 <div class="{see docutils">
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-6/kirchhoffs-current-law-kcl/" rel="noreferer noopener" target="_blank">All Abount Circuits: Kirchhoff’s Current Law</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws#Kirchhoff's_current_law" rel="noreferer noopener" target="_blank">Wikipedia: Kirchhoff’s Current Law</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Series_and_parallel_circuits" rel="noreferer noopener" target="_blank">Wikipedia: Series and parallel circuits</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=CdqvY_vY1XA&amp;amp;list=PLowKtXNTBypETld5oX1ZMI-LYoA2LWi8D&amp;amp;index=2" rel="noreferer noopener" target="_blank">Ben Eater: Limiting current through an LED</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Diode" rel="noreferer noopener" target="_blank">Wikipedia: Diode</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/LED_circuit" rel="noreferer noopener" target="_blank">Wikipedia: LED circuit</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Light-emitting_diode" rel="noreferer noopener" target="_blank">Wkipedia: Light-emitting diod</a></p></li>
 </ul>
 </div>
 </section>
@@ -648,7 +588,7 @@ parallel.</p>
             <div class="collapse nftt-toc-collapse" id="tocContents">
               <nav id="TableOfContents">
                 <ul>
-<li><a class="reference internal" href="#">Adventure 1b: Equivalent resistance: Resistors in parallel</a><ul>
+<li><a class="reference internal" href="#">Adventure 2a: Light an LED</a><ul>
 <li><a class="reference internal" href="#goal">Goal</a></li>
 <li><a class="reference internal" href="#simulate-circuit">Simulate circuit</a></li>
 <li><a class="reference internal" href="#build-circuit">Build circuit</a></li>
@@ -669,19 +609,19 @@ parallel.</p>
       <nav id="paginator" class="py-4" aria-label="Documentation navigation">
     <div class="container">
       <ul class="pagination justify-content-between mb-0"><li class="d-flex page-item">
-            <a href="../adv-series/adv-series.html" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: Adventure 1a: Equivalent resistance: Resistors in series">
+            <a href="../adv-parallel/adv-parallel.html" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: Adventure 1b: Equivalent resistance: Resistors in parallel">
               <span class="prev-page"><i class="bi bi-caret-left"></i></span>
               <div class="d-none d-sm-flex flex-column">
                 <span class="text-small text-start text-muted">Previous</span>
-                <span class="underline">Adventure 1a: Equivalent resistance: Resistors in series</span>
+                <span class="underline">Adventure 1b: Equivalent resistance: Resistors in parallel</span>
               </div>
             </a>
           </li>
         <li class="d-flex page-item ms-auto">
-            <a href="../adv-led/adv-led.html" class="d-flex px-5 align-items-end" rel="next" aria-label="Next page: Adventure 2a: Light an LED">
+            <a href="../adventures-WIP.html" class="d-flex px-5 align-items-end" rel="next" aria-label="Next page: Adventures (WIP)">
               <div class="d-flex flex-column">
                 <span class="text-small text-end text-start text-muted">Next</span>
-                <span class="underline">Adventure 2a: Light an LED</span>
+                <span class="underline">Adventures (WIP)</span>
               </div>
               <span class="next-page"><i class="bi bi-caret-right"></i></span>
             </a>

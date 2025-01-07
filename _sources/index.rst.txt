@@ -66,6 +66,7 @@ Looking forward hearing from you!
    adv-ohm/adv-ohm.md
    adv-series/adv-series.md
    adv-parallel/adv-parallel.md
+   adv-led/adv-led.md
    adventures-WIP.md
 
 ..
