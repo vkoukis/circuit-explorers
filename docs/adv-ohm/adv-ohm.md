@@ -290,7 +290,7 @@ multimeter to measure voltages and currents:
    you measure? How does it compare to your estimate in the previous step?
    What happens if your reverse the probes?
 
-   :::{caution}
+   :::{warning}
    Make sure to *always* connect the multimeter **in series** with a resistor,
    never directly to a voltage source, to **limit the current** that will flow
    through it. Otherwise, you risk blowing the internal fuse of the multimeter.

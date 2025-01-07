@@ -1,51 +1,5 @@
 # Adventures (WIP)
 
-## Adventure 0A: Light an LED
-
-EveryCircuit.
-Simulate circuit. Battery --> LED. How much voltage? Kaboom.
-
-LED is 2-2.5V.
-Aim for 2.4V. --> 130Ω
-Video: https://www.youtube.com/shorts/CIMbjJQNHa0
-
-Make sure to place the *long* leg [anode, (+)] to the side of VCC.
-
-Multimeter: Place inline, measure current [20.4mA].
-What do you expect the voltage drop to be around the resistor? [U = IR = 2.9988V]
-Measure voltage drop across resistor [3.02V].
-Measure voltage drop across diode [2.09V]
-What is their sum, why? It is ~5V, exactly the voltage of our source, because U = U1 + U2.
-
-Does it make a difference if the resistor is between VCC and (+) or between (-) and GND? No, because the current is exactly the same.
-
-Use a momentary switch inline with the LED. Use the multimeter to find out what each pin does, set it to "Ω - 🎵" mode.
-
-Replace with a small switch (SPDT) inline with the LED. Switch it on and off at will.
-The switch is a *double throw* switch. Design a circuit which allows you to choose one of the two LEDs to light. Pay attention to the *polarity* of the LEDs.
-
-
-### Adventure 0B: Light an LED: Design and simulate circuit
-
-Navigate to https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html
-Click **Download for Windows 10 64-bit and forward** [or any other option, depending on the Operating System on your computer]
-Double-click file `LTspice64.msi`, follow the instructions to install LTspice
-Launch LTspice. It may prompt you to update your library files, accept and allow it to download the latest versions.
-
-1. Download QSPice: https://getqspice.com/InstallQSPICE.exe
-1. "Install as User"
-1. Allow the installer to download QSPICE
-
-
-### Adventure 0C: Light an LED: Build physical circuit
-
-## Adventure 0A: Light two LEDs
-
-### Adventure 0B: Light two LEDs: Design and simulate circuit
-
-### Adventure 0C: Light two LEDs: Build physical circuit
-
-
 ## Adventure 0: Install Digital, run tutorial
 
 *Goal:* Install [Digital](https://github.com/hneemann/Digital).
@@ -247,7 +201,11 @@ Standardize on a 1k pull-up resistor.
 
 <!-- IDEAS FOR NEXT ADVENTURES
 
+## Adventure: Use a potentiometer as a voltage divider. Question: How can you get 3.3V out of 5V?
+
 ## Adventure: Control an LED with a pushbutton / switch: https://www.sparkfun.com/tutorials/219, https://www.youtube.com/watch?v=zhaX7Im2gTw&list=PLsAJMThMEUtpbjd5ulXTbUwijF1nJkjd_
+
+## Adventure: Transistors as gates: https://www.youtube.com/watch?v=Lv9Gc3Lghjk&list=PLowKtXNTBypETld5oX1ZMI-LYoA2LWi8D&index=10
 
 ## Adventure: Implement all gates via NAND, so we can standardize on 74LS00
 
